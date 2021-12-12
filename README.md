@@ -139,9 +139,9 @@ The response data from the API returns an array of ones and zeros, with specific
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Dec 13| Project Approval / Core Application Structure / Pseudocode | Incomplete
-|Dec 14| API setup / Basic JS logic | Incomplete
-|Dec 15| Working Model of Game / Responsive Elements | Incomplete
+|Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Incomplete
+|Dec 14| API setup / Mobile Layout / PC JS logic | Incomplete
+|Dec 15| AI JS Logic / JS for game log and game state | Incomplete
 |Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
 |Dec 17| Presentations | Incomplete
 
@@ -151,15 +151,23 @@ The response data from the API returns an array of ones and zeros, with specific
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Component | Priority  | Estimated Time    | Curently Invested | Actual Time   |
+| ---       | :---:     |  :---:            | :---:         | :---:         |
+| Core HTML, CSS | H    | 3hrs              | 0 hrs         | X hrs         |
+| Setup Flexbox  | H    | 3hrs              | 0 hrs         | X hrs        |
+| Pseudocode JS  | H    | 3hrs              | 0 hrs         | X hrs        |
+| Footer Links   | L    | 1hrs              | 0 hrs         | X hrs        |
+| Setup API to display on Page | H | 3hrs   | 0 hrs         | X hrs        |
+| Impliment Media Query | H    | 3hrs       | 0 hrs         | X hrs        |
+| Ensure Layout Ports to Mobile | H | 3hrs  | 0 hrs         | X hrs        |
+| In Game Objects | H    | 3hrs              | 0 hrs         | X hrs       |
+| JS logic for PC | H   | 3hrs              | 0 hrs         | X hrs        |
+| JS logic for AI | H   | 3hrs              | 0 hrs         | X hrs        |
+| JS logic for game log | H | 3hrs          | 0 hrs         | X hrs        |
+| JS logic for game state | H | 3hrs        | 0 hrs         | X hrs        |
+| Styling for Win/Lose | M    | 3hrs              | 0 hrs         | X hrs         |
+| Finalize Styling   | M | 3hrs          | 0 hrs         | X hrs        |
+| Total     |           | 40hrs             | 0hrs          | X hrs        |
 
 ## Code Snippet
 
