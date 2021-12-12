@@ -2,7 +2,7 @@
 
 ## Project Name
 
-**_Web of Rogues_**
+**_Web of Rogues_** (This will be link to live site on completion)
 
 ## Project Description
 
@@ -142,12 +142,9 @@ The response data from the API returns an array of ones and zeros, with specific
             }
         }, "...This also continues on for quite some time."
 ```
-All this looks like nonsence, but when formatted properly we begin to see how this could be used for making complex dungeons.
-[See this example of a live site using this API.](http://rogue-api.herokuapp.com)
+> All this looks like nonsence, but when formatted properly we begin to see how this could be used for making complex dungeons. [See this example of a live site using this API.](http://rogue-api.herokuapp.com)
 
 ## Wireframes
-
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ## MVP/PostMVP
 #### MVP
