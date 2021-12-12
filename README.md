@@ -6,11 +6,143 @@ Web of Rogues
 
 ## Project Description
 
-This project is a browser based "rogue-like" game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
+This project is a browser based *rogue-like* game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+This project uses [Roguelike Web API](https://roguelike.docs.apiary.io/) for procedural dungeon generation.
+
+The response data from the API returns an array of ones and zeros, with specifications for the dimensions of "rooms" and "corridors" below:
+```
+{
+    "map": [
+        [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ], "... This contingues on for about a thousand lines."
+
+    "_width": "25",
+    "_height": "80",
+    "_rooms": [
+        {
+            "_x1": 19,
+            "_y1": 29,
+            "_x2": 21,
+            "_y2": 33,
+            "_doors": {
+                "19,28": 1,
+                "20,34": 1
+            }
+        },
+        {
+            "_x1": 9,
+            "_y1": 9,
+            "_x2": 14,
+            "_y2": 13,
+            "_doors": {
+                "15,13": 1
+            }
+        },
+        {
+            "_x1": 14,
+            "_y1": 20,
+            "_x2": 19,
+            "_y2": 24,
+            "_doors": {
+                "14,19": 1,
+                "19,25": 1
+            }
+        },
+        {
+            "_x1": 16,
+            "_y1": 11,
+            "_x2": 18,
+            "_y2": 15,
+            "_doors": {
+                "15,13": 1,
+                "15,15": 1
+            }
+        }, "...This also continues on for quite some time."
+```
+All this looks like nonsence, but when formatted properly we begin to see how this could be used for making complex dungeons.
 
 ## Wireframes
 
