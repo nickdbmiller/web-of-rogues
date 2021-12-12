@@ -41,61 +41,6 @@ The response data from the API returns an array of ones and zeros, with specific
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1
         ], "... This contingues on for about a thousand lines."
 
@@ -162,7 +107,7 @@ The response data from the API returns an array of ones and zeros, with specific
 #### MVP
 - Uses [Roguelike Web API](https://roguelike.docs.apiary.io/) for procedural level generation
 - Uses `Flexbox` styling to maintain page layout on different page sizes
-- Uses media query to respond to mobile page size
+- Uses media query to respond to vertical mobile page size
 - Displays header with title of game, and footer with links to gitHub and LinkedIn
 - Renders in *ASCII Style* graphics
 - Player character ("PC") takes turns moving and fighting enemies
@@ -173,13 +118,21 @@ The response data from the API returns an array of ones and zeros, with specific
 - Displays activity log for PC actions (eg. "You move West.")
 - Displays current level
 - When PC reaches staircase on level 10 win condition is met, the activity log announces victory, and dungeon level is replaced with a victory screen
-- When PC health reaches zero the game ends and dungeon level is replaced with a defeat screen
+- When PC health reaches zero the activity log anounces death and dungeon level is replaced with a defeat screen
 
-#### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
+#### PostMVP
+- Add horizontal view for mobile
+- Use local storage to save game data
+- Add main menu screen to manage saved games, start new games, and hall of champions
+- Make the game increase in difficulty as the dungeon level increases
+- Add additional PC classes (Wizard, Ranger, Fighter, etc.)
+- Add items that the PC can pick up and interact with
+- Add spells
+- Add additional enemy types
+- Add animations
+- Add a leveling system so the PC can become stronger
+- Add a requirement to fight your way back out of the dungeon to win
+- Add a postgame where you can go deeper into the dungeon to increase your score
 
 ## Project Schedule
 
