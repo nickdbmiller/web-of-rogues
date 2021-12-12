@@ -136,23 +136,18 @@ The response data from the API returns an array of ones and zeros, with specific
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Dec 13| Project Approval | Incomplete
-|Dec 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Dec 14| Pseudocode / actual code | Incomplete
-|Dec 15| Initial Clickable Model  | Incomplete
-|Dec 16| MVP | Incomplete
+|Dec 13| Project Approval / Core Application Structure / Pseudocode | Incomplete
+|Dec 14| API setup / Basic JS logic | Incomplete
+|Dec 15| Working Model of Game / Responsive Elements | Incomplete
+|Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
 |Dec 17| Presentations | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+![Priority Matrix for Development of Web of Rogues](./assets/images/WoR_priorityMatrix.png)
 
 ## Timeframes
 
@@ -177,4 +172,6 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ Use this section to document what changes were made and the reasoning behind those changes.
+
+## Citations
