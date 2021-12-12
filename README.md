@@ -146,6 +146,18 @@ The response data from the API returns an array of ones and zeros, with specific
 
 ## Wireframes
 
+#### Main Game
+![Main Game for Web of Rogues](./assets/images/WoR_mainGame_Desktop.png)
+
+#### Victory Screen
+![Victory Screen for Web of Rogues](./assets/images/WoR_Victory_Desktop.png)
+
+#### Defeat Screen
+![Victory Screen for Web of Rogues](./assets/images/WoR_Defeat_Desktop.png)
+
+#### Mobile Layout Vertical
+![Victory Screen for Web of Rogues](./assets/images/WoR_mainGame_Mobile.png)
+
 ## MVP/PostMVP
 #### MVP
 - Uses [Roguelike Web API](https://roguelike.docs.apiary.io/) for procedural level generation
@@ -161,6 +173,7 @@ The response data from the API returns an array of ones and zeros, with specific
 - Displays activity log for PC actions (eg. "You move West.")
 - Displays current level
 - When PC reaches staircase on level 10 win condition is met, the activity log announces victory, and dungeon level is replaced with a victory screen
+- When PC health reaches zero the game ends and dungeon level is replaced with a defeat screen
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
