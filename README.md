@@ -1,9 +1,8 @@
-# API-Project-Placeholder
 # Project Overview
 
 ## Project Name
 
-The name of your project.
+Web of Rogues
 
 ## Project Description
 
