@@ -6,7 +6,7 @@ Web of Rogues
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This project is a browser based "rogue-like" game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
 
 ## API and Data Sample
 
