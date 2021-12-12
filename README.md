@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Web of Rogues
+**_Web of Rogues_**
 
 ## Project Description
 
@@ -143,21 +143,27 @@ The response data from the API returns an array of ones and zeros, with specific
         }, "...This also continues on for quite some time."
 ```
 All this looks like nonsence, but when formatted properly we begin to see how this could be used for making complex dungeons.
+[See this example of a live site using this API.](http://rogue-api.herokuapp.com)
 
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+## MVP/PostMVP
+#### MVP
+- Uses [Roguelike Web API](https://roguelike.docs.apiary.io/) for procedural level generation
+- Uses `Flexbox` styling to maintain page layout on different page sizes
+- Uses media query to respond to mobile page size
+- Displays header with title of game, and footer with links to gitHub and LinkedIn
+- Renders in *ASCII Style* graphics
+- Player character ("PC") takes turns moving and fighting enemies
+- Takes arrow key input from user to move PC up, down, left, and right
+- Enemies use simple AI pathing to move toward and "attack" PC
+- On finding the "staircase" PC will move to next level
+- Displays health stat, points and simple inventory for PC
+- Displays activity log for PC actions (eg. "You move West.")
+- Displays current level
+- When PC reaches staircase on level 10 win condition is met, the activity log announces victory, and dungeon level is replaced with a victory screen
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
