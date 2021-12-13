@@ -1,14 +1,18 @@
 * {
     max-width: 50000px;
-    max-height: 50000px; 
+    max-height: 50000px;
 }
 
 body {
 
 }
 
+.container {
+    border: 2px solid red;
+}
+
 nav {
-    
+    text-align: center;
 }
 
 h1 {
@@ -24,7 +28,7 @@ main {
 }
 
 #player-stats {
-
+    background-color: mediumseagreen;
 }
 
 #main-game {
@@ -32,23 +36,25 @@ main {
 }
 
 #dungeon {
-
+    background-color: grey;
 }
 
 #activity-log {
-
+    background-color: azure;
 }
 
 #player-inventory {
-
+    background-color: gold;
 }
 
 footer {
-
+    text-align: center;
+    /* background-color: black;
+    color: white; */
 }
 
 ul {
-
+    list-style: none;
 }
 
 li {
