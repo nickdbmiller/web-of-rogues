@@ -23,7 +23,22 @@ function checkKey(e) {
 };
 
 // Function to call API
+async function fetchData() {
+    try {
+        let res = await axios.get(url);
+        console.log(url);
+        console.log(res);
 
+    } catch (error) {
+        displayError();
+    }
+}
+fetchData();
+
+// Error Handler
+function displayError() {
+    console.log("404 Dungeon Data");
+};
 
 // Function to Generate Dungeons
 
