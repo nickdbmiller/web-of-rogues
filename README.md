@@ -110,18 +110,18 @@ The response data from the API returns an array of ones and zeros, with specific
 - Uses media query to respond to vertical mobile page size
 - Displays header with title of game, and footer with links to gitHub and LinkedIn
 - Renders in *ASCII Style* graphics
-- Player character ("PC") takes turns moving and fighting enemies
+- Player character ("PC") moves
 - Takes arrow key input from user to move PC up, down, left, and right
-- Enemies use simple AI pathing to move toward and "attack" PC
 - On finding the "staircase" PC will move to next level
 - Displays health stat, points and simple inventory for PC
 - Displays activity log for PC actions (eg. "You move West.")
 - Displays current level
 - When PC reaches staircase on level 10 win condition is met, the activity log announces victory, and dungeon level is replaced with a victory screen
-- When PC health reaches zero the activity log anounces death and dungeon level is replaced with a defeat screen
 
 #### PostMVP
 - Add horizontal view for mobile
+- Enemies use simple AI pathing to move toward and "attack" PC
+- When PC health reaches zero the activity log anounces death and dungeon level is replaced with a defeat screen
 - Use local storage to save game data
 - Add main menu screen to manage saved games, start new games, and hall of champions
 - Make the game increase in difficulty as the dungeon level increases
