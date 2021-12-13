@@ -139,7 +139,7 @@ The response data from the API returns an array of ones and zeros, with specific
 |  Day | Deliverable | Status
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Incomplete
+|Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Complete
 |Dec 14| API setup / Mobile Layout / PC JS logic | Incomplete
 |Dec 15| AI JS Logic / JS for game log and game state | Incomplete
 |Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
@@ -154,10 +154,10 @@ The response data from the API returns an array of ones and zeros, with specific
 | Component | Priority  | Estimated Time    | Curently Invested | Actual Time   |
 | ---       | :---:     |  :---:            | :---:         | :---:         |
 | Core HTML, CSS | H    | 3hrs              | 2 hrs         | 2 hrs         |
-| Setup Flexbox  | H    | 3hrs              | 0 hrs         | X hrs        |
-| Pseudocode JS  | H    | 3hrs              | 0 hrs         | X hrs        |
+| Setup Flexbox  | H    | 3hrs              | 1 hrs         | 1 hrs        |
+| Pseudocode JS  | H    | 3hrs              | 1 hrs         | X hrs        |
 | Footer Links   | L    | 1hrs              | 0.25 hrs         | 0.25 hrs        |
-| Setup API to display on Page | H | 3hrs   | 0 hrs         | X hrs        |
+| Setup API to display on Page | H | 3hrs   | 4 hrs         | X hrs        |
 | Impliment Media Query | H    | 3hrs       | 0 hrs         | X hrs        |
 | Ensure Layout Ports to Mobile | H | 3hrs  | 0 hrs         | X hrs        |
 | In Game Objects | H    | 3hrs              | 0 hrs         | X hrs       |
