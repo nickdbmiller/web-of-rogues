@@ -138,7 +138,7 @@ The response data from the API returns an array of ones and zeros, with specific
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Incomplete
 |Dec 14| API setup / Mobile Layout / PC JS logic | Incomplete
 |Dec 15| AI JS Logic / JS for game log and game state | Incomplete
