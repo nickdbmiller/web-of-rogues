@@ -26,7 +26,7 @@ function checkKey(e) {
 // Function to call API
 async function fetchData() {
     try {
-        let res = await axios.get(url);
+        // let res = await axios.get(url);
         console.log(url);
         console.log(res);
         resetDungeon();
@@ -46,8 +46,19 @@ function displayError() {
 // Function to Generate Dungeons
 // Ref: `http://rogue-api.herokuapp.com/`
 function dungeonGenerator(data) {
-    let dungeon = document.createElement(`div`);
-    dungeon.classList.add("dungeon");
+    let dungeon = document.createElement(`dungeon`);
+    data.map.forEach((row, x) => {
+        let rowObj = document.createElement("row");
+        row.forEach((col, y) => {
+            let colObj = document.createElement("tile");
+            colObj.setAttribute('value', col);
+            colObj.setAttribute('coord', `${x+1},${y+1}`);
+            colObj.className = col === 1 ? "wall" : "floor";
+            rowObj.appendChild(colObj);
+        });
+        dungeon.appendChild(rowObj);
+    });
+    dungeonContainer.appendChild(dungeon);
 }
 
 // Function to reset dungeon

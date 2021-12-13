@@ -56,6 +56,7 @@ main {
     /* TEMPORARY BG TO DETECT GRAPHICAL ERRORS WITH DUNGEON */
     background-color: violet;
     border: 2px solid green;
+    display: block;
 }
 
 #activity-log {
@@ -108,29 +109,29 @@ a:hover {
 
 /* Dungeon Styling */
 /* None of the following needs to be hardcoded, and probably shouldn't be... */
-.dungeon {
+dungeon {
     display: block;
     width: calc(20px * 80);
     margin: 48px auto 0 auto;
     background: #222;
 }
 
-.dungeon > .row {
+dungeon > row {
     display: block;
     height: 20px;
 }
 
-.dungeon > .row > .tile {
+dungeon > row > tile {
     display: inline-block;
     width: 20px;
     height: 20px;
     color: #eee;
 }
 
-.tile.floor {
+tile.floor {
     background: black;
 }
 
-.tile.wall {
+tile.wall {
     background: grey;
 }
