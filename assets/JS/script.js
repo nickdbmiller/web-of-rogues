@@ -4,11 +4,12 @@ const GENERATOR = `uniform`
 const url = `${DOMAIN}${GENERATOR}?width=80&height=25`;
 
 // Get needed HTML tags
+const dungeonContainer = document.querySelector("#dungeon-container");
 
 // Set placeholder
 
 // Arrow Key Listeners (can be expanded to use WASD and num keys as well.)
-// `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
+// Ref: `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
 document.onkeydown = checkKey;
 function checkKey(e) {
     if (e.keyCode == '37') {
@@ -28,7 +29,9 @@ async function fetchData() {
         let res = await axios.get(url);
         console.log(url);
         console.log(res);
-
+        resetDungeon();
+        // Passes the response as an argument to the generator.
+        dungeonGenerator(res);
     } catch (error) {
         displayError();
     }
@@ -41,6 +44,19 @@ function displayError() {
 };
 
 // Function to Generate Dungeons
+// Ref: `http://rogue-api.herokuapp.com/`
+function dungeonGenerator(data) {
+    
+}
+
+
+// Function to reset dungeon
+
+function resetDungeon() {
+    while (dungeonContainer.firstChild) {
+        dungeonContainer.removeChild(dungeonContainer.firstChild);
+    }
+}
 
 // Function to render PC
 

@@ -39,6 +39,7 @@ main {
 
 #main-game {
     border: 2px solid red;
+    background-color: grey;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -48,14 +49,20 @@ main {
 
 }
 
+#level-container {
+    border: 2px solid yellow;
+    background-color: azure;
+
+}
+
 #dungeon-container {
     background-color: grey;
-    border: 2px solid red;
+    border: 2px solid green;
 }
 
 #dungeon {
     background-color: white;
-    border: 2px solid red;
+    border: 2px solid blue;
 }
 
 #activity-log {
