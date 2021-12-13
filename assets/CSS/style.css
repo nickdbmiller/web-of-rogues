@@ -4,15 +4,12 @@
 }
 
 body {
-
-}
-
-.container {
-    border: 2px solid red;
+    display: block;
 }
 
 nav {
     text-align: center;
+    border: 2px solid red;
 }
 
 h1 {
@@ -20,11 +17,12 @@ h1 {
 }
 
 main {
+    border: 2px solid red;
 
 }
 
 .sidebar {
-
+    border: 2px solid red;
 }
 
 #player-stats {
@@ -32,15 +30,18 @@ main {
 }
 
 #main-game {
+    border: 2px solid red;
 
 }
 
 #dungeon {
     background-color: grey;
+    border: 2px solid red;
 }
 
 #activity-log {
     background-color: azure;
+    border: 2px solid red;
 }
 
 #player-inventory {
@@ -49,6 +50,7 @@ main {
 
 footer {
     text-align: center;
+    border: 2px solid red;
     /* background-color: black;
     color: white; */
 }
@@ -58,9 +60,29 @@ ul {
 }
 
 li {
-
+    display: inline;
 }
 
 a {
+    text-decoration: none;
+}
 
+a:link {
+    color: azure;
+}
+
+a:visited {
+    color: azure;
+}
+
+a:hover {
+    color: chartreuse;
+}
+
+#copyright {
+    display: block;
+}
+
+.fab {
+    display: inline;
 }
