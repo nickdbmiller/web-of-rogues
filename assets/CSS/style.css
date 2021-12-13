@@ -3,22 +3,13 @@
     max-height: 50000px;
 }
 
+/* Page Background */
 body {
     display: block;
     background-color: black;
 }
 
-nav {
-    text-align: center;
-    color: azure;
-    border: 2px solid red;
-    background-color: black;
-}
-
-h1 {
-
-}
-
+/* Flex Container */
 main {
     border: 2px solid red;
     display: flex;
@@ -29,6 +20,7 @@ main {
     align-items: stretch;
 }
 
+/* Sidebars */
 .sidebar {
     border: 2px solid red;
 }
@@ -37,6 +29,11 @@ main {
     background-color: mediumseagreen;
 }
 
+#player-inventory {
+    background-color: gold;
+}
+
+/* Game (Flex Container)*/
 #main-game {
     border: 2px solid red;
     background-color: grey;
@@ -56,13 +53,9 @@ main {
 }
 
 #dungeon-container {
-    background-color: grey;
+    /* TEMPORARY BG TO DETECT GRAPHICAL ERRORS WITH DUNGEON */
+    background-color: violet;
     border: 2px solid green;
-}
-
-#dungeon {
-    background-color: white;
-    border: 2px solid blue;
 }
 
 #activity-log {
@@ -70,8 +63,12 @@ main {
     border: 2px solid red;
 }
 
-#player-inventory {
-    background-color: gold;
+/* Top and Bottom Section (Static) */
+nav {
+    text-align: center;
+    color: azure;
+    border: 2px solid red;
+    background-color: black;
 }
 
 footer {
@@ -107,4 +104,33 @@ a:hover {
 
 .footer-icon {
     display: inline;
+}
+
+/* Dungeon Styling */
+/* None of the following needs to be hardcoded, and probably shouldn't be... */
+.dungeon {
+    display: block;
+    width: calc(20px * 80);
+    margin: 48px auto 0 auto;
+    background: #222;
+}
+
+.dungeon > .row {
+    display: block;
+    height: 20px;
+}
+
+.dungeon > .row > .tile {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #eee;
+}
+
+.tile.floor {
+    background: black;
+}
+
+.tile.wall {
+    background: grey;
 }

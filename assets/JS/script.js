@@ -46,9 +46,9 @@ function displayError() {
 // Function to Generate Dungeons
 // Ref: `http://rogue-api.herokuapp.com/`
 function dungeonGenerator(data) {
-    
+    let dungeon = document.createElement(`div`);
+    dungeon.classList.add("dungeon");
 }
-
 
 // Function to reset dungeon
 
