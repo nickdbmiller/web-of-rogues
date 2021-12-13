@@ -42,7 +42,7 @@ The response data from the API returns an array of ones and zeros, with specific
             1,
             1,
             1
-        ], "... This contingues on for about a thousand lines."
+        ], "... This continues on for about a thousand lines."
 
     "_width": "25",
     "_height": "80",
@@ -153,10 +153,10 @@ The response data from the API returns an array of ones and zeros, with specific
 
 | Component | Priority  | Estimated Time    | Curently Invested | Actual Time   |
 | ---       | :---:     |  :---:            | :---:         | :---:         |
-| Core HTML, CSS | H    | 3hrs              | 0 hrs         | X hrs         |
+| Core HTML, CSS | H    | 3hrs              | 2 hrs         | 2 hrs         |
 | Setup Flexbox  | H    | 3hrs              | 0 hrs         | X hrs        |
 | Pseudocode JS  | H    | 3hrs              | 0 hrs         | X hrs        |
-| Footer Links   | L    | 1hrs              | 0 hrs         | X hrs        |
+| Footer Links   | L    | 1hrs              | 0.25 hrs         | 0.25 hrs        |
 | Setup API to display on Page | H | 3hrs   | 0 hrs         | X hrs        |
 | Impliment Media Query | H    | 3hrs       | 0 hrs         | X hrs        |
 | Ensure Layout Ports to Mobile | H | 3hrs  | 0 hrs         | X hrs        |

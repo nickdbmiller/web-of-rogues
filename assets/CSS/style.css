@@ -5,6 +5,7 @@
 
 body {
     display: block;
+    background-color: black;
 }
 
 nav {
@@ -38,11 +39,22 @@ main {
 
 #main-game {
     border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
 
 }
 
-#dungeon {
+#dungeon-container {
     background-color: grey;
+    border: 2px solid red;
+}
+
+#dungeon {
+    background-color: white;
     border: 2px solid red;
 }
 
@@ -66,10 +78,6 @@ ul {
     list-style: none;
 }
 
-li {
-    display: inline;
-}
-
 a {
     text-decoration: none;
 }
@@ -90,6 +98,6 @@ a:hover {
     display: block;
 }
 
-.fab {
+.footer-icon {
     display: inline;
 }
