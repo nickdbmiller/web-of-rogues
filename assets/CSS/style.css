@@ -99,14 +99,6 @@ a:hover {
     color: chartreuse;
 }
 
-#copyright {
-    display: block;
-}
-
-.footer-icon {
-    display: inline;
-}
-
 /* Dungeon Styling */
 /* None of the following needs to be hardcoded, and probably shouldn't be... */
 dungeon {
