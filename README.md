@@ -140,7 +140,7 @@ The response data from the API returns an array of ones and zeros, with specific
 |---|---| ---|
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Complete
-|Dec 14| API setup / Mobile Layout / PC JS logic | Incomplete
+|Dec 14| API setup / Mobile Layout / PC JS logic | Complete
 |Dec 15| AI JS Logic / JS for game log and game state | Incomplete
 |Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
 |Dec 17| Presentations | Incomplete
@@ -158,10 +158,10 @@ The response data from the API returns an array of ones and zeros, with specific
 | Pseudocode JS  | H    | 3hrs              | 1 hrs         | X hrs        |
 | Footer Links   | L    | 1hrs              | 0.25 hrs         | 0.25 hrs        |
 | Setup API to display on Page | H | 3hrs   | 4 hrs         | X hrs        |
-| Impliment Media Query | H    | 3hrs       | 0 hrs         | X hrs        |
-| Ensure Layout Ports to Mobile | H | 3hrs  | 0 hrs         | X hrs        |
-| In Game Objects | H    | 3hrs              | 0 hrs         | X hrs       |
-| JS logic for PC | H   | 3hrs              | 0 hrs         | X hrs        |
+| Impliment Media Query | H    | 3hrs       | 1 hrs         | 1 hrs        |
+| Ensure Layout Ports to Mobile | H | 3hrs  | 4 hrs         | 4 hrs        |
+| In Game Objects | H    | 3hrs              | 3 hrs         | 3 hrs       |
+| JS logic for PC | H   | 3hrs              | 2 hrs         | X hrs        |
 | JS logic for AI | H   | 3hrs              | 0 hrs         | X hrs        |
 | JS logic for game log | H | 3hrs          | 0 hrs         | X hrs        |
 | JS logic for game state | H | 3hrs        | 0 hrs         | X hrs        |

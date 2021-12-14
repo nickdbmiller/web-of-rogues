@@ -119,11 +119,7 @@ function displayCurrentStats () {
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
    function renderStairs () {
-
-    // Pick a random available floor tile
-
-    // set the innerText of that tile to >.
-       const tile = document.getElementById(`-38`);
+       const tile = document.getElementById(`${floorTiles[RNG(0, (floorTiles.length-1))]}`);
        tile.innerText = `>`;
    }
 
