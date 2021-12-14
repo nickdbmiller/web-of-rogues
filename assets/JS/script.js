@@ -1,11 +1,15 @@
 "use strict";
 
 let playGame = 0;
+let score = 0;
+let health = 10;
+let level = 1;
 
 function runGame() {
     playGame = 1;
     dungeonGenerator();
     renderPC();
+    displayInitStats();
 };
 
 // Setup URL to call API:
@@ -16,6 +20,7 @@ const url = `${DOMAIN}${GENERATOR}?width=80&height=25`;
 // Get needed HTML tags
 const dungeonContainer = document.querySelector("#dungeon-container");
 const startButton = document.querySelector("#start-button");
+const dungeonLevel = document.querySelector("#dungeon-level");
 
 // Handle Button
 startButton.addEventListener("click", runGame);
@@ -92,6 +97,12 @@ function renderPC () {
     console.log("PC");
 }
 
+// Function to display initial stats
+function displayInitStats () {
+    dungeonLevel.innerText = `Dungeon Level: 0`
+
+}
+
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
 
@@ -118,9 +129,8 @@ function checkKey(e) {
     // Checks if there is a staircase and acts accordingly.
 
 // Function to increment level
-let gameLevel = 1;
 function incrementLevel () {
-    gameLevel++;
+    level++;
 }
 
 // Function to display level
