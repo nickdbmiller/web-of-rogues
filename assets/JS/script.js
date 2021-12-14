@@ -33,6 +33,7 @@ function displayError() {
 // Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
 async function dungeonGenerator() {
     resetDungeon();
+    setPlaceholder();
     await callAPI(url);
     let dungeon = document.createElement('dungeon');
     data.map.forEach((row, x) => {
@@ -55,6 +56,11 @@ function resetDungeon() {
     while (dungeonContainer.firstChild) {
         dungeonContainer.removeChild(dungeonContainer.firstChild);
     }
+}
+
+// Function to set placeholder
+function setPlaceholder() {
+    console.log("It works");
 }
 
 // Function to render PC

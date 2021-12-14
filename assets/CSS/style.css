@@ -5,7 +5,10 @@
 
 /* Page Background */
 body {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     background-color: black;
 }
 
@@ -36,7 +39,7 @@ main {
 /* Game (Flex Container)*/
 #main-game {
     border: 2px solid red;
-    background-color: grey;
+    background-color: black;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -60,8 +63,11 @@ main {
 }
 
 #activity-log {
-    background-color: azure;
-    border: 2px solid red;
+    background-color: black;
+    color: chartreuse;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 0px 10px;
 }
 
 /* Top and Bottom Section (Static) */
@@ -77,6 +83,7 @@ footer {
     border: 2px solid red;
     background-color: black;
     color: azure;
+    padding: 10px;
 }
 
 ul {
@@ -104,8 +111,8 @@ a:hover {
 dungeon {
     display: block;
     width: calc(20px * 80);
-    margin: 48px auto 0 auto;
-    background: #222;
+    margin: 0;
+    background: grey;
 }
 
 dungeon > row {
@@ -117,7 +124,7 @@ dungeon > row > tile {
     display: inline-block;
     width: 20px;
     height: 20px;
-    color: #eee;
+    color: azure;
 }
 
 tile.floor {
