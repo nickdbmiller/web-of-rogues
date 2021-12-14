@@ -1,5 +1,13 @@
 "use strict";
 
+let playGame = 0;
+
+function runGame() {
+    playGame = 1;
+    dungeonGenerator();
+    renderPC();
+};
+
 // Setup URL to call API:
 const DOMAIN = 'https://rogue-api.herokuapp.com/api/';
 const GENERATOR = `uniform`
@@ -10,7 +18,7 @@ const dungeonContainer = document.querySelector("#dungeon-container");
 const startButton = document.querySelector("#start-button");
 
 // Handle Button
-startButton.addEventListener("click", dungeonGenerator);
+startButton.addEventListener("click", runGame);
 
 // Function to call API
 let data;
@@ -50,6 +58,21 @@ async function dungeonGenerator() {
         dungeonContainer.appendChild(dungeon);
     };
 
+// Function to resize tile elements for screen size
+
+// let winWidth;
+// window.addEventListener('resize', tileSizer)
+
+// function tileSizer () {
+//     if (playGame == "1") {
+//         tile = document.querySelectorAll("tile");
+//         console.log(tile)
+//         winWidth = window.innerWidth;
+//         tile.style.width = "20px";
+//         tile.style.height = "20px"
+//     }
+// }
+
 // Function to reset dungeon
 
 function resetDungeon() {
@@ -60,11 +83,14 @@ function resetDungeon() {
 
 // Function to set placeholder
 function setPlaceholder() {
-    console.log("It works");
+    console.log("Placeholder");
 }
 
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
+function renderPC () {
+    console.log("PC");
+}
 
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
