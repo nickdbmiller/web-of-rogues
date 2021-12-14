@@ -5,8 +5,69 @@ const url = `${DOMAIN}${GENERATOR}?width=80&height=25`;
 
 // Get needed HTML tags
 const dungeonContainer = document.querySelector("#dungeon-container");
+const startButton = document.querySelector("#start-button");
 
-// Set placeholder
+// Handle Button
+startButton.addEventListener("click", dungeonGenerator);
+
+// Function to call API
+async function callAPI(endpoint, callBack) {
+    try {
+        let res = await axios.get(endpoint);
+        console.log(endpoint);
+        console.log(res);
+
+        let json = JSON.parse(res);
+        // Passes the response as an argument to the generator.
+
+    } catch (error) {
+        displayError();
+    }
+}
+
+// Error Handler
+function displayError() {
+    console.log("404 Dungeon Data");
+};
+
+// Function to Generate Dungeons
+// Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
+function dungeonGenerator() {
+    return callAPI(url, (res) => {
+        resetDungeon();
+        let dungeon = document.createElement('dungeon');
+        res.map.forEach((row, x) => {
+            let rowObj = document.createElement('row');
+            row.forEach((col, y) => {
+                let colObj = document.createElement("tile");
+                colObj.setAttribute('value', col);
+                colObj.setAttribute('coord', `${x+1},${y+1}`);
+                colObj.className = col === 1 ? "wall" : "floor";
+                rowObj.appendChild(colObj);
+            });
+            dungeon.appendChild(rowObj);
+        });
+        dungeonContainer.appendChild(dungeon);
+    });
+};
+
+// Function to reset dungeon
+
+function resetDungeon() {
+    while (dungeonContainer.firstChild) {
+        dungeonContainer.removeChild(dungeonContainer.firstChild);
+    }
+}
+
+// Function to render PC
+    // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
+
+// Function to render Staircase
+    // RNG that picks a floor tile and then sets the innertext to > that fills the tile
+
+
+// Function to move PC
+    // moveUp/Down/Left/Right() {Checks for wall, then checks for object, then changes tiles}
 
 // Arrow Key Listeners (can be expanded to use WASD and num keys as well.)
 // Ref: `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
@@ -23,64 +84,24 @@ function checkKey(e) {
     };
 };
 
-// Function to call API
-async function fetchData() {
-    try {
-        // let res = await axios.get(url);
-        console.log(url);
-        console.log(res);
-        resetDungeon();
-        // Passes the response as an argument to the generator.
-        dungeonGenerator(res);
-    } catch (error) {
-        displayError();
-    }
-}
-fetchData();
-
-// Error Handler
-function displayError() {
-    console.log("404 Dungeon Data");
-};
-
-// Function to Generate Dungeons
-// Ref: `http://rogue-api.herokuapp.com/`
-function dungeonGenerator(data) {
-    let dungeon = document.createElement(`dungeon`);
-    data.map.forEach((row, x) => {
-        let rowObj = document.createElement("row");
-        row.forEach((col, y) => {
-            let colObj = document.createElement("tile");
-            colObj.setAttribute('value', col);
-            colObj.setAttribute('coord', `${x+1},${y+1}`);
-            colObj.className = col === 1 ? "wall" : "floor";
-            rowObj.appendChild(colObj);
-        });
-        dungeon.appendChild(rowObj);
-    });
-    dungeonContainer.appendChild(dungeon);
-}
-
-// Function to reset dungeon
-
-function resetDungeon() {
-    while (dungeonContainer.firstChild) {
-        dungeonContainer.removeChild(dungeonContainer.firstChild);
-    }
-}
-
-// Function to render PC
-
-// Function to render Staircase
-
-// Function to move PC
-
 // Function to interact with objects
+    // Checks if there is a staircase and acts accordingly.
 
 // Function to increment level
+let gameLevel = 1;
+function incrementLevel () {
+    gameLevel++;
+}
 
 // Function to display level
+    // Select level output in the DOM and set it to the current level when increment level happens.
 
 // Function for win
+function checkForWinner () {
+    if (gameLevel >= 10) {
+        //Change dungeon to victory screen.
+        alert("You win!");
+    }
+}
 
 // Function for activity log
