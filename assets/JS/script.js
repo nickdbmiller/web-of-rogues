@@ -8,8 +8,9 @@ let level = 1;
 function runGame() {
     playGame = 1;
     dungeonGenerator();
-    renderPC();
     displayInitStats();
+    renderPC();
+    renderStairs();
 };
 
 // Setup URL to call API:
@@ -54,11 +55,12 @@ async function dungeonGenerator() {
     data.map.forEach((row, x) => {
             let rowObj = document.createElement('row');
             row.forEach((col, y) => {
-                let colObj = document.createElement("tile");
-                colObj.setAttribute('value', col);
-                colObj.setAttribute('coord', `${x+1},${y+1}`);
-                colObj.className = col === 1 ? "wall" : "floor";
-                rowObj.appendChild(colObj);
+                let tile = document.createElement("tile");
+                tile.setAttribute('value', col);
+                tile.setAttribute('coord', `${x+1},${y+1}`);
+                tile.className = col === 1 ? "wall" : "floor";
+                tile.id = `${x+1},${y+1}`;
+                rowObj.appendChild(tile);
             });
             dungeon.appendChild(rowObj);
         });
@@ -99,7 +101,7 @@ function renderPC () {
     console.log("PC");
 }
 
-// Function to display initial stats
+// Functions to display stats
 function displayInitStats () {
     dungeonLevel.innerText = `Dungeon Level: 1`
     playerHealth.innerText = `HP: 10/10`
@@ -113,7 +115,11 @@ function displayCurrentStats () {
 }
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
+   function renderStairs () {
+       const tile = document.querySelector('tile');
 
+       console.log(tile);
+   }
 
 // Function to move PC
     // moveUp/Down/Left/Right() {Checks for wall, then checks for object, then changes tiles}

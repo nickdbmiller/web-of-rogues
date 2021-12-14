@@ -159,10 +159,12 @@ tile.wall {
 
 tile.PC {
     background: black;
+    color: azure;
 }
 
 tile.stairs {
     background: black;
+    color: yellow;
 }
 
 /* Horizontal Mobile Layout */
