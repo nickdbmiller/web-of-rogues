@@ -8,6 +8,7 @@ let level = 1;
 async function runGame() {
     playGame = 1;
     await dungeonGenerator();
+    // document.querySelectorAll()
     displayInitStats();
     renderPC();
     renderStairs();
@@ -55,7 +56,7 @@ async function dungeonGenerator() {
     data.map.forEach((row, x) => {
             let rowObj = document.createElement('row');
             row.forEach((col, y) => {
-                let tile = document.createElement("tile");
+                let tile = document.createElement("div");
                 tile.setAttribute('value', col);
                 tile.setAttribute('coord', `${x+1},${y+1}`);
                 tile.className = col === 1 ? "wall" : "floor";
@@ -98,7 +99,7 @@ function setPlaceholder() {
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
 function renderPC () {
-    const tile = document.getElementById(`-12`);
+    const tile = document.getElementById(`-37`);
     tile.innerText = `@`;
 }
 
@@ -117,7 +118,9 @@ function displayCurrentStats () {
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
    function renderStairs () {
-       const tile = document.getElementById(`-11`);
+
+    // Pick a random available floor tile
+       const tile = document.getElementById(`-38`);
        tile.innerText = `>`;
    }
 
@@ -163,4 +166,17 @@ function checkForWinner () {
 // RNG
 function RNG(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
+}
+
+// Checks if the tile is impassible
+function checkCollision () {
+    // if the class of the tile is wall, return true
+}
+
+
+
+// Available floor tiles
+let floorTiles = [];
+function gatherEmptyTiles () {
+    
 }

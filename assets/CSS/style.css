@@ -137,7 +137,7 @@ dungeon > row {
 }
 
 /* We need to be able to dynamically resize the height and width with view size */
-dungeon > row > tile {
+dungeon > row > div {
     display: flex;
     width: 1vw;
     height: 1vw;
@@ -147,16 +147,16 @@ dungeon > row > tile {
     align-content: center;
     justify-content: center;
     align-items: stretch;
-    font-size: 0.5vw;
+    font-size: 0.75vw;
     
 }
 
-tile.floor {
+div.floor {
     background: black;
     border: 1px dashed azure;
 }
 
-tile.wall {
+div.wall {
     background: grey;
     border: 1px solid gray;
 }
