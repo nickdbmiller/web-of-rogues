@@ -5,9 +5,9 @@ let score = 0;
 let health = 10;
 let level = 1;
 
-function runGame() {
+async function runGame() {
     playGame = 1;
-    dungeonGenerator();
+    await dungeonGenerator();
     displayInitStats();
     renderPC();
     renderStairs();
@@ -59,7 +59,7 @@ async function dungeonGenerator() {
                 tile.setAttribute('value', col);
                 tile.setAttribute('coord', `${x+1},${y+1}`);
                 tile.className = col === 1 ? "wall" : "floor";
-                tile.id = `${x+1},${y+1}`;
+                tile.id = `-${x+1}${y+1}`;
                 rowObj.appendChild(tile);
             });
             dungeon.appendChild(rowObj);
@@ -116,9 +116,8 @@ function displayCurrentStats () {
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
    function renderStairs () {
-       const tile = document.querySelector('tile');
-
-       console.log(tile);
+       const tile = document.getElementById('-11');
+       tile.innerText = `>`;
    }
 
 // Function to move PC
