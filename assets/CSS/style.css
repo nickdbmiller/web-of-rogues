@@ -84,6 +84,13 @@ main {
     padding: 0px 10px;
 }
 
+#start-button {
+    color: chartreuse;
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 10px 10px;}
+
 /* Top and Bottom Section (Static) */
 nav {
     text-align: center;
