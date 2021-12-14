@@ -1,3 +1,5 @@
+"use strict";
+
 // Setup URL to call API:
 const DOMAIN = 'https://rogue-api.herokuapp.com/api/';
 const GENERATOR = `uniform`
@@ -11,19 +13,16 @@ const startButton = document.querySelector("#start-button");
 startButton.addEventListener("click", dungeonGenerator);
 
 // Function to call API
-async function callAPI(endpoint, callBack) {
+let data;
+async function callAPI(endpoint) {
     try {
         let res = await axios.get(endpoint);
-        console.log(endpoint);
-        console.log(res);
-
-        let json = JSON.parse(res);
-        // Passes the response as an argument to the generator.
-
+        data = res.data;
+        return data;
     } catch (error) {
         displayError();
-    }
-}
+    };
+};
 
 // Error Handler
 function displayError() {
@@ -32,11 +31,11 @@ function displayError() {
 
 // Function to Generate Dungeons
 // Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
-function dungeonGenerator() {
-    return callAPI(url, (res) => {
-        resetDungeon();
-        let dungeon = document.createElement('dungeon');
-        res.map.forEach((row, x) => {
+async function dungeonGenerator() {
+    resetDungeon();
+    await callAPI(url);
+    let dungeon = document.createElement('dungeon');
+    data.map.forEach((row, x) => {
             let rowObj = document.createElement('row');
             row.forEach((col, y) => {
                 let colObj = document.createElement("tile");
@@ -48,8 +47,7 @@ function dungeonGenerator() {
             dungeon.appendChild(rowObj);
         });
         dungeonContainer.appendChild(dungeon);
-    });
-};
+    };
 
 // Function to reset dungeon
 
