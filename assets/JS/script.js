@@ -99,6 +99,7 @@ function setPlaceholder() {
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
 function renderPC () {
+    chooseFloorTile();
     const tile = document.getElementById(`-37`);
     tile.innerText = `@`;
 }
@@ -120,6 +121,8 @@ function displayCurrentStats () {
    function renderStairs () {
 
     // Pick a random available floor tile
+
+    // set the innerText of that tile to >.
        const tile = document.getElementById(`-38`);
        tile.innerText = `>`;
    }
@@ -175,8 +178,20 @@ function checkCollision () {
 
 
 
-// Available floor tiles
-let floorTiles = [];
-function gatherEmptyTiles () {
-    
+// Makes an array of the ID's of floor tiles
+
+function chooseFloorTile () {
+    let floorTiles = [];
+    for (let r = 1; r <= 25; r++) {
+        for (let c = 1; c <= 80; c++) {
+            let thisTile = document.getElementById(`-${r}${c}`);
+            if (thisTile.className == `floor`) {
+                floorTiles.push(`-${r}${c}`);
+            };
+        };
+    };
+    console.log(floorTiles);
+    // If the class == 'floor' then add its id to the array
+    // use RNG to pick one at a random index between 0 and 1-array.length
+    // return that id
 }
