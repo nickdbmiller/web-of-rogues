@@ -10,6 +10,7 @@ async function runGame() {
     await dungeonGenerator();
     // document.querySelectorAll()
     displayInitStats();
+    listFloorTiles();
     renderPC();
     renderStairs();
 };
@@ -99,8 +100,7 @@ function setPlaceholder() {
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
 function renderPC () {
-    chooseFloorTile();
-    const tile = document.getElementById(`-37`);
+    const tile = document.getElementById(`${floorTiles[RNG(0, (floorTiles.length-1))]}`);
     tile.innerText = `@`;
 }
 
@@ -179,9 +179,9 @@ function checkCollision () {
 
 
 // Makes an array of the ID's of floor tiles
+let floorTiles = [];
 
-function chooseFloorTile () {
-    let floorTiles = [];
+function listFloorTiles () {
     for (let r = 1; r <= 25; r++) {
         for (let c = 1; c <= 80; c++) {
             let thisTile = document.getElementById(`-${r}${c}`);
@@ -190,8 +190,5 @@ function chooseFloorTile () {
             };
         };
     };
-    console.log(floorTiles);
-    // If the class == 'floor' then add its id to the array
-    // use RNG to pick one at a random index between 0 and 1-array.length
-    // return that id
-}
+    return floorTiles;
+};
