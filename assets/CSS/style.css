@@ -50,16 +50,26 @@ main {
 }
 
 #level-container {
-    border: 2px solid yellow;
-    background-color: azure;
-
+    background-color: black;
+    color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: stretch;
 }
 
 #dungeon-container {
-    /* TEMPORARY BG TO DETECT GRAPHICAL ERRORS WITH DUNGEON */
-    background-color: violet;
-    border: 2px solid green;
-    display: block;
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 #activity-log {
