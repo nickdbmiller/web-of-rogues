@@ -98,7 +98,8 @@ function setPlaceholder() {
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
 function renderPC () {
-    console.log("PC");
+    const tile = document.getElementById(`-12`);
+    tile.innerText = `@`;
 }
 
 // Functions to display stats
@@ -116,7 +117,7 @@ function displayCurrentStats () {
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
    function renderStairs () {
-       const tile = document.getElementById('-11');
+       const tile = document.getElementById(`-11`);
        tile.innerText = `>`;
    }
 
@@ -158,3 +159,8 @@ function checkForWinner () {
 }
 
 // Function for activity log
+
+// RNG
+function RNG(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}

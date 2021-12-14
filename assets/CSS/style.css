@@ -139,32 +139,26 @@ dungeon > row {
 /* We need to be able to dynamically resize the height and width with view size */
 dungeon > row > tile {
     display: flex;
-    width: 10px;
-    height: 10px;
+    width: 1vw;
+    height: 1vw;
     color: azure;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: stretch;
+    font-size: 0.5vw;
+    
 }
 
 tile.floor {
     background: black;
+    border: 1px dashed azure;
 }
 
 tile.wall {
     background: grey;
-}
-
-tile.PC {
-    background: black;
-    color: azure;
-}
-
-tile.stairs {
-    background: black;
-    color: yellow;
+    border: 1px solid gray;
 }
 
 /* Horizontal Mobile Layout */
