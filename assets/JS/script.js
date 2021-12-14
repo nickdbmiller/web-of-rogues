@@ -21,6 +21,8 @@ const url = `${DOMAIN}${GENERATOR}?width=80&height=25`;
 const dungeonContainer = document.querySelector("#dungeon-container");
 const startButton = document.querySelector("#start-button");
 const dungeonLevel = document.querySelector("#dungeon-level");
+const playerHealth = document.querySelector("#health-stat");
+const playerScore = document.querySelector("#score");
 
 // Handle Button
 startButton.addEventListener("click", runGame);
@@ -99,8 +101,9 @@ function renderPC () {
 
 // Function to display initial stats
 function displayInitStats () {
-    dungeonLevel.innerText = `Dungeon Level: 0`
-
+    dungeonLevel.innerText = `Dungeon Level: ${level}`
+    playerHealth.innerText = `HP: ${health}/10`
+    playerScore.innerText = `Score: ${score}pts`
 }
 
 // Function to render Staircase
