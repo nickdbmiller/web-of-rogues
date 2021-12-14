@@ -101,11 +101,16 @@ function renderPC () {
 
 // Function to display initial stats
 function displayInitStats () {
+    dungeonLevel.innerText = `Dungeon Level: 1`
+    playerHealth.innerText = `HP: 10/10`
+    playerScore.innerText = `Score: 0pts`
+}
+
+function displayCurrentStats () {
     dungeonLevel.innerText = `Dungeon Level: ${level}`
     playerHealth.innerText = `HP: ${health}/10`
     playerScore.innerText = `Score: ${score}pts`
 }
-
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
 
