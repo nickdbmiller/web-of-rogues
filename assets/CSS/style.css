@@ -50,7 +50,7 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     min-height: 70%;
     min-width: 70%;
@@ -62,11 +62,11 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-content: center;
+    align-content: stretch;
     align-items: stretch;
     margin: 10px;
     padding: 0px 0px;
-    min-height: 50%;
+    min-height: 30%;
     min-width: 70%;
 }
 
@@ -74,15 +74,15 @@ main {
     background-color: black;
     border: 2px dashed azure;
     margin: 10px;
-    padding: 10px 10px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: center;
     align-items: center;
-    min-height: 70%;
-    min-width: 80%;
+    min-height: 50%;
+    min-width: 70%;
 }
 
 #activity-log {
@@ -159,6 +159,8 @@ dungeon > row > div {
     align-content: center;
     justify-content: center;
     align-items: stretch;
+    width: 0.7vw;
+    height: 0.7vw;
     font-size: 0.75vw;
     
 }
