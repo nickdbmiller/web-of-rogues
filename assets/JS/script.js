@@ -156,7 +156,10 @@ function movePlayerLeft() {
 // Each coordinate is gonna look like (1-${height})(1-{$width})
 
 function movePlayerUp() {
-
+    let intPlayerPos = parseInt(currentPlayerPos);
+    intPlayerPos += 60;
+    desiredPos = intPlayerPos.toString();
+    checkTile();
 }
 
 function movePlayerRight() {
@@ -167,7 +170,10 @@ function movePlayerRight() {
 }
 
 function movePlayerDown() {
-
+    let intPlayerPos = parseInt(currentPlayerPos);
+    intPlayerPos -= 60;
+    desiredPos = intPlayerPos.toString();
+    checkTile();
 }
 
 function changePlayerPos() {
