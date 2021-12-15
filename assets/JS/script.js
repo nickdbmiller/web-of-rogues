@@ -3,10 +3,10 @@
 let playGame = 0;
 let score = 0;
 let health = 10;
-let level = 1;
-let currentPlayerPos;
-let desiredPos;
-let currentStairPos;
+let gameLevel = 1;
+let currentPlayerPos = null;
+let desiredPos = null;
+let currentStairPos = null;
 let floorTiles = [];
 
 async function runGame() {
@@ -101,7 +101,7 @@ function displayInitStats () {
 }
 
 function displayCurrentStats () {
-    dungeonLevel.innerText = `Dungeon Level: ${level}`
+    dungeonLevel.innerText = `Dungeon Level: ${gameLevel}`
     playerHealth.innerText = `HP: ${health}/10`
     playerScore.innerText = `Score: ${score}pts`
 }
@@ -153,8 +153,6 @@ function movePlayerLeft() {
     checkTile();
 }
 
-// Each coordinate is gonna look like (1-${height})(1-{$width})
-
 function movePlayerUp() {
     let intPlayerPos = parseInt(currentPlayerPos);
     intPlayerPos += 60;
@@ -199,21 +197,25 @@ function checkTile () {
 };
 
 // Function to increment level
-function incrementLevel () {
-    level++;
-    displayCurrentStats();
+async function incrementLevel () {
+    gameLevel++;
     checkForWinner();
+    currentPlayerPos = null;
+    desiredPos = null;
+    currentStairPos = null;
+    floorTiles = [];
+    await dungeonGenerator();
+    displayCurrentStats();
+    listFloorTiles();
+    renderPC();
+    renderStairs();
 }
 
 // Function for win
-async function checkForWinner () {
+function checkForWinner () {
     if (gameLevel > 10) {
         //Change dungeon to victory screen.
         alert("You win!");
-    } else {
-        await dungeonGenerator();
-        renderPC();
-        renderStairs();
     };
 };
 
