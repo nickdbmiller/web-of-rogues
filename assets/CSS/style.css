@@ -91,6 +91,8 @@ main {
     border: 2px dashed azure;
     margin: 10px;
     padding: 0px 10px;
+    min-height: 40%;
+    min-width: 70%;
 }
 
 #start-button {
