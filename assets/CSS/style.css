@@ -21,13 +21,17 @@ main {
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     padding: 10px 10px;
+    min-width: 90vw;
+    min-height: 80vh;
 }
 
 /* Sidebars */
 .sidebar {
+    display: flex;
+    flex-direction: column;
     border: 2px solid red;
 }
 
@@ -48,6 +52,8 @@ main {
     align-content: center;
     justify-content: center;
     align-items: stretch;
+    min-height: 70%;
+    min-width: 70%;
 }
 
 #level-container {
@@ -141,7 +147,7 @@ dungeon > row > div {
     display: flex;
     width: 1vw;
     height: 1vw;
-    color: azure;
+    color: chartreuse;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
