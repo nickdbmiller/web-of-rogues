@@ -190,6 +190,7 @@ dungeon > row > div {
     width: 1vw;
     height: 1vw;
     font-size: 0.75vw;
+    font-weight: bold;
 }
 
 div.floor {
