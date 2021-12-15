@@ -15,6 +15,10 @@ body {
 }
 
 /* Flex Container */
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
 main {
     border: 2px dashed azure;
     display: flex;
@@ -26,6 +30,7 @@ main {
     padding: 10px 10px;
     min-width: 90vw;
     min-height: 80vh;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #onload-placeholder {
