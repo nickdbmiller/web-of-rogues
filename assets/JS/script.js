@@ -248,6 +248,7 @@ function setVictoryScreen() {
     victoryScreen.appendChild(newGameButton);
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", runGame);
+    startButton.addEventListener("click", resetActivityLog);
 }
 
 // Function for activity log
@@ -255,6 +256,12 @@ function updateActivtyLog(message) {
     let newLog = document.createElement("li");
     newLog.innerText = `> ${message}`
     readOut.appendChild(newLog);
+}
+
+function resetActivityLog() {
+    while (readOut.firstChild) {
+        readOut.removeChild(readOut.firstChild);
+    }
 }
 
 // RNG
