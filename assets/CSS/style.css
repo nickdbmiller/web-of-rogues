@@ -19,6 +19,10 @@ h1 {
     font-family: 'Press Start 2P', cursive;
 }
 
+h2 {
+    margin: 10px 10px 10px;
+}
+
 main {
     border: 2px dashed azure;
     display: flex;
@@ -63,6 +67,8 @@ main {
     margin: 10px;
     padding: 0px 10px;
     color: chartreuse;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 /* Game (Flex Container)*/
@@ -194,6 +200,8 @@ dungeon > row > div {
     align-items: stretch;
     width: 1vw;
     height: 1vw;
+    max-width: 15px;
+    max-height: 15px;
     font-size: 0.75vw;
     font-weight: bold;
 }
@@ -231,3 +239,10 @@ div.wall {
     }
 }
 
+@media only screen and (min-width: 2500px) {
+    dungeon > row > div {
+        max-width: 20px;
+        max-height: 20px;
+        font-size: 0.6vw;
+    }
+}

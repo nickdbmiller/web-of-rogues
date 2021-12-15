@@ -87,6 +87,7 @@ async function dungeonGenerator() {
             dungeon.appendChild(rowObj);
         });
         dungeonContainer.appendChild(dungeon);
+        
     };
 
 // Function to reset dungeon
