@@ -5,6 +5,7 @@ let score = 0;
 let health = 10;
 let level = 1;
 let currentPlayerPos;
+let desiredPos;
 let currentStairPos;
 
 async function runGame() {
@@ -127,34 +128,57 @@ document.onkeydown = checkKey;
 function checkKey(e) {
     if (playGame >= 1) {
         if (e.keyCode == '37') {            //Left
-            console.log("Left");
-
+            movePlayerLeft();
         } else if (e.keyCode == '38') {     //Up
-            console.log("Up");
+            movePlayerUp();
         } else if (e.keyCode == '39') {     //Right
-            console.log("Right");
+            movePlayerRight();
         } else if (e.keyCode == '40') {     //Down
-            console.log("Down");
-        };
+            movePlayerDown();
+        } else {
+            console.log("Invalid Input");
+        }
     };
 };
 
+function movePlayerLeft() {
+
+}
+
+function movePlayerUp() {
+
+}
+
+function movePlayerRight() {
+
+}
+
+function movePlayerDown() {
+
+}
+
 // Function to interact with objects
     // Checks if there is a staircase and acts accordingly.
+function checkTile () {
+    if 
+}
 
 // Function to increment level
 function incrementLevel () {
     level++;
+    displayCurrentStats();
+    checkForWinner();
 }
 
-// Function to display level
-    // Select level output in the DOM and set it to the current level when increment level happens.
-
 // Function for win
-function checkForWinner () {
-    if (gameLevel >= 10) {
+async function checkForWinner () {
+    if (gameLevel > 10) {
         //Change dungeon to victory screen.
         alert("You win!");
+    } else {
+        await dungeonGenerator();
+        renderPC();
+        renderStairs();
     }
 }
 
@@ -164,13 +188,6 @@ function checkForWinner () {
 function RNG(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
-
-// Checks if the tile is impassible
-function checkCollision () {
-    // if the class of the tile is wall, return true
-}
-
-
 
 // Makes an array of the ID's of floor tiles
 let floorTiles = [];
