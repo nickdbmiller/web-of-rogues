@@ -142,6 +142,7 @@ function checkKey(e) {
             movePlayerDown();
         } else {
             console.log("Invalid Input");
+            updateActivtyLog("Hmm... that's not a direction.")
         }
     };
 };
