@@ -18,8 +18,8 @@ async function runGame() {
 // Setup URL to call API:
 const DOMAIN = 'https://rogue-api.herokuapp.com/api/';
 const GENERATOR = `uniform`
-const dungeonWidth = 80;
-const dungeonHeight = 25;
+const dungeonWidth = 60;
+const dungeonHeight = 20;
 const url = `${DOMAIN}${GENERATOR}?width=${dungeonWidth}&height=${dungeonHeight}`;
 
 // Get needed HTML tags
