@@ -104,9 +104,18 @@ function displayCurrentStats () {
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
 function renderStairs () {
     let position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
-    const tile = document.getElementById(`${position}`);
+    let tile = document.getElementById(`${position}`);
     currentStairPos = position;
-    tile.innerText = `>`;
+    if (currentPlayerPos == currentStairPos) {
+        while (currentPlayerPos == currentStairPos) {
+            position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
+            tile = document.getElementById(`${position}`);
+            currentStairPos = position;
+        }
+        tile.innerText = `>`;
+    } else {
+        tile.innerText = `>`;
+    }
 }
 
 // Function to move PC
