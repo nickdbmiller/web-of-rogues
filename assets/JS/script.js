@@ -143,13 +143,13 @@ function renderStairs () {
 document.onkeydown = checkKey;
 function checkKey(e) {
     if (playGame >= 1) {
-        if (e.keyCode == '37') {            //Left
+        if (e.keyCode == '37' || e.keyCode == '65') {
             movePlayerLeft();
-        } else if (e.keyCode == '38') {     //Up
+        } else if (e.keyCode == '38' || e.keyCode == '87') {
             movePlayerUp();
-        } else if (e.keyCode == '39') {     //Right
+        } else if (e.keyCode == '39' || e.keyCode == '68') {
             movePlayerRight();
-        } else if (e.keyCode == '40') {     //Down
+        } else if (e.keyCode == '40' || e.keyCode == '83') {
             movePlayerDown();
         } else {
             console.log("Invalid Input");
