@@ -145,7 +145,30 @@ function checkKey(e) {
 };
 
 function movePlayerLeft() {
-    desiredPos = null; // get the ID of the tile to the immediate left.
+    // if (currentPlayerPos >= -11
+    console.log("Step 1");
+    console.log(currentPlayerPos);    
+    console.log(typeof(currentPlayerPos));
+
+    console.log("Step 2");
+    let intPlayerPos = parseInt(currentPlayerPos);
+    console.log(intPlayerPos);    
+    console.log(typeof(intPlayerPos));
+
+    console.log("Step 3");
+    intPlayerPos++;
+    console.log(intPlayerPos);
+
+    // This is where the fun begins
+    console.log("Step 4");
+    let newStringPlayerPos = intPlayerPos.toString();
+    console.log(newStringPlayerPos);    
+    console.log(typeof(newStringPlayerPos));
+
+    console.log("Step 5");
+    desiredPos = newStringPlayerPos;
+    console.log(desiredPos);
+    console.log(typeof(desiredPos));
     checkTile();
 }
 
@@ -172,7 +195,7 @@ function changePlayerPos() {
 // Function to interact with objects
     // Checks if there is a staircase and acts accordingly.
 function checkTile () {
-    if (floorTiles.includes(`${desiredPos}`)) {
+    if (floorTiles.includes(desiredPos)) {
         if (desiredPos == currentStairPos) {
             incrementLevel();
         } else {
