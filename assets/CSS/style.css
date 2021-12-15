@@ -121,7 +121,16 @@ main {
     background-color: black;
     border: 2px dashed azure;
     margin: 10px;
-    padding: 10px 10px;}
+    padding: 10px 10px;
+}
+
+.ng-button {
+    color: yellow;
+}
+
+.death-button {
+    color: red;
+}
 
 /* Top and Bottom Section (Static) */
 nav {

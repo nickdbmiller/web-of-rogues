@@ -229,7 +229,7 @@ async function incrementLevel () {
 
 // Function for win
 function checkForWinner () {
-    if (gameLevel > 10) {
+    if (gameLevel > 1) {
         winStat = 1;
         setVictoryScreen();
         updateActivtyLog("You have delved the deepest level! Victory is yours!")
@@ -243,6 +243,7 @@ function setVictoryScreen() {
     victoryScreen.id = "onload-placeholder"
     const newGameButton = document.createElement("button");
     newGameButton.classList.add("start-button");
+    newGameButton.classList.add("ng-button");
     newGameButton.innerText = "Start New Game+";
     dungeonContainer.appendChild(victoryScreen);
     victoryScreen.appendChild(newGameButton);
@@ -251,17 +252,26 @@ function setVictoryScreen() {
     startButton.addEventListener("click", resetActivityLog);
 }
 
-// Function for activity log
+// Functions for activity log
+let logItems = 3;
 function updateActivtyLog(message) {
     let newLog = document.createElement("li");
     newLog.innerText = `> ${message}`
     readOut.appendChild(newLog);
+    logItems++;
+    if (logItems >= 12) {
+        scrollLog();
+    }
 }
 
 function resetActivityLog() {
     while (readOut.firstChild) {
         readOut.removeChild(readOut.firstChild);
     }
+}
+
+function scrollLog() {
+    console.log("scroll");
 }
 
 // RNG
