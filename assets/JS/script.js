@@ -259,9 +259,13 @@ function updateActivtyLog(message) {
     newLog.innerText = `> ${message}`
     readOut.appendChild(newLog);
     logItems++;
-    if (logItems >= 12) {
+    if (window.innerWidth > 600) {
+        if (logItems >= 12) {
+            readOut.removeChild(readOut.firstChild);
+        };
+    } else if (logItems >= 3) {
         readOut.removeChild(readOut.firstChild);
-    };
+    }
 };
 
 function resetActivityLog() {
