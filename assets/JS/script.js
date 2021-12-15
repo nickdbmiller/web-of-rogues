@@ -10,7 +10,6 @@ let currentStairPos;
 async function runGame() {
     playGame = 1;
     await dungeonGenerator();
-    // document.querySelectorAll()
     displayInitStats();
     listFloorTiles();
     renderPC();
@@ -123,16 +122,20 @@ function renderStairs () {
 
 // Arrow Key Listeners (can be expanded to use WASD and num keys as well.)
 // Ref: `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
+
 document.onkeydown = checkKey;
 function checkKey(e) {
-    if (e.keyCode == '37') {
-        console.log("Left");
-    } else if (e.keyCode == '38') {
-        console.log("Up");
-    } else if (e.keyCode == '39') {
-        console.log("Right");
-    } else if (e.keyCode == '40') {
-        console.log("Down");
+    if (playGame >= 1) {
+        if (e.keyCode == '37') {            //Left
+            console.log("Left");
+
+        } else if (e.keyCode == '38') {     //Up
+            console.log("Up");
+        } else if (e.keyCode == '39') {     //Right
+            console.log("Right");
+        } else if (e.keyCode == '40') {     //Down
+            console.log("Down");
+        };
     };
 };
 
