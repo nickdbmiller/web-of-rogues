@@ -17,8 +17,7 @@ async function runGame() {
     listFloorTiles();
     renderPC();
     renderStairs();
-    console.log(currentPlayerPos);
-    console.log(currentStairPos);
+    updateActivtyLog("You enter the dungeon.");
 };
 
 // Setup URL to call API:
@@ -53,7 +52,8 @@ async function callAPI(endpoint) {
 
 // Error Handler
 function displayError() {
-    console.log("404 Dungeon Data");
+    console.log("404 Dungeon Not Found")
+    updateActivtyLog("404 Dungeon Not Found");
 };
 
 // Function to Generate Dungeons
@@ -126,10 +126,8 @@ function renderStairs () {
 }
 
 // Function to move PC
-    // moveUp/Down/Left/Right() {Checks for wall, then checks for object, then changes tiles}
-
-// Arrow Key Listeners (can be expanded to use WASD and num keys as well.)
-// Ref: `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
+    // Arrow Key Listeners (can be expanded to use WASD and num keys as well.)
+    // Ref: `https://stackoverflow.com/questions/5597060/detecting-arrow-key-presses-in-javascript/5597114`
 
 document.onkeydown = checkKey;
 function checkKey(e) {
@@ -152,28 +150,28 @@ function movePlayerLeft() {
     let intPlayerPos = parseInt(currentPlayerPos);
     intPlayerPos++;
     desiredPos = intPlayerPos.toString();
-    checkTile();
+    checkTile("You move West.");
 }
 
 function movePlayerUp() {
     let intPlayerPos = parseInt(currentPlayerPos);
     intPlayerPos += 60;
     desiredPos = intPlayerPos.toString();
-    checkTile();
+    checkTile("You move North.");
 }
 
 function movePlayerRight() {
     let intPlayerPos = parseInt(currentPlayerPos);
     intPlayerPos--;
     desiredPos = intPlayerPos.toString();
-    checkTile();
+    checkTile("You move East.");
 }
 
 function movePlayerDown() {
     let intPlayerPos = parseInt(currentPlayerPos);
     intPlayerPos -= 60;
     desiredPos = intPlayerPos.toString();
-    checkTile();
+    checkTile("You move South.");
 }
 
 function changePlayerPos() {
@@ -186,13 +184,14 @@ function changePlayerPos() {
 
 // Function to interact with objects
     // Checks if there is a staircase and acts accordingly.
-function checkTile () {
+function checkTile (movementMessage) {
     if (floorTiles.includes(desiredPos)) {
         if (desiredPos == currentStairPos) {
             incrementLevel();
             updateActivtyLog("Your footsteps echo as you descend deeper into the dungeon...");
         } else {
             changePlayerPos();
+            updateActivtyLog(`${movementMessage}`)
         };
     } else {
         updateActivtyLog("You bump into a wall!");
