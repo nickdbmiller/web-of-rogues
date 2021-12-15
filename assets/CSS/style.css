@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-    margin: 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 main {
@@ -231,6 +231,9 @@ div.wall {
 
     #main-game {
         order: 1;
+        min-height: none;
+        min-width: none;
+        
     }
 
     #player-stats {
@@ -239,6 +242,158 @@ div.wall {
     
     #player-inventory {
         order: 3;    
+    }
+
+    h2 {
+        margin: 5px;
+    }
+
+    #onload-placeholder {
+        min-height: none;
+    }
+    
+    .loading-placeholder {
+        min-height: none;
+    }
+
+    .sidebar {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #level-container {
+        background-color: black;
+        color: chartreuse;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        align-items: stretch;
+        margin: 10px;
+        padding: 0px 0px;
+        min-height: 30%;
+        min-width: 70%;
+    }
+    
+    #dungeon-container {
+        background-color: black;
+        border: 2px dashed azure;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        justify-content: center;
+        align-items: center;
+        min-height: 30vh;
+        min-width: 70%;
+    }
+    
+    #activity-log {
+        background-color: black;
+        color: chartreuse;
+        border: 2px dashed azure;
+        margin: 10px;
+        padding: 0px 10px;
+        min-height: 40%;
+        min-width: 70%;
+    }
+    
+    .start-button {
+        color: chartreuse;
+        background-color: black;
+        border: 2px dashed azure;
+        margin: 10px;
+        padding: 10px 10px;
+        font-family: 'Press Start 2P', cursive;
+    }
+    
+    .ng-button {
+        color: yellow;
+        font-family: 'Press Start 2P', cursive;
+    }
+    
+    .death-button {
+        color: red;
+        font-family: 'Press Start 2P', cursive;
+    }
+    
+    /* Top and Bottom Section (Static) */
+    nav {
+        text-align: center;
+        color: azure;
+        background-color: black;
+    }
+    
+    footer {
+        text-align: center;
+        background-color: black;
+        color: azure;
+        padding: 10px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    li {
+        margin: 5px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:link {
+        color: azure;
+    }
+    
+    a:visited {
+        color: azure;
+    }
+    
+    a:hover {
+        color: chartreuse;
+    }
+    
+    /* Dungeon Styling */
+    dungeon {
+        display: flex;
+        flex-direction: column;
+        background: grey;
+    }
+    
+    dungeon > row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    /* We need to be able to dynamically resize the height and width with view size */
+    dungeon > row > div {
+        display: flex;
+        color: chartreuse;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: stretch;
+        width: 1vw;
+        height: 1vw;
+        max-width: 15px;
+        max-height: 15px;
+        font-size: 0.75vw;
+        font-weight: bold;
+    }
+    
+    div.floor {
+        background: black;
+        border: 1px dashed azure;
+    }
+    
+    div.wall {
+        background: grey;
+        border: 1px solid gray;
     }
 }
 
