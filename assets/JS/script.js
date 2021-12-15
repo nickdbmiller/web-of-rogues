@@ -249,7 +249,6 @@ function setVictoryScreen() {
     victoryScreen.appendChild(newGameButton);
     let startButton = document.querySelector(".start-button");
     startButton.addEventListener("click", runGame);
-    startButton.addEventListener("click", resetActivityLog);
 }
 
 // Functions for activity log
