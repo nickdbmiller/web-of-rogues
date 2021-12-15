@@ -33,6 +33,7 @@ const startButton = document.querySelector("#start-button");
 const dungeonLevel = document.querySelector("#dungeon-level");
 const playerHealth = document.querySelector("#health-stat");
 const playerScore = document.querySelector("#score");
+const readOut = document.querySelector("#readout");
 
 // Handle Button
 startButton.addEventListener("click", runGame);
@@ -192,7 +193,7 @@ function checkTile () {
             changePlayerPos();
         };
     } else {
-        console.log("Wall Collision");
+        updateActivtyLog("You bump into a wall!");
     };
 };
 
@@ -220,6 +221,11 @@ function checkForWinner () {
 };
 
 // Function for activity log
+function updateActivtyLog(message) {
+    let newLog = document.createElement("li");
+    newLog.innerText = `> ${message}`
+    readOut.appendChild(newLog);
+}
 
 // RNG
 function RNG(min, max) {
