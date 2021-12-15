@@ -58,15 +58,11 @@ main {
 .sidebar {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-}
-
-#player-stats {
-    background-color: mediumseagreen;
-}
-
-#player-inventory {
-    background-color: gold;
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 0px 10px;
+    color: chartreuse;
 }
 
 /* Game (Flex Container)*/
@@ -153,6 +149,10 @@ footer {
 
 ul {
     list-style: none;
+}
+
+li {
+    margin: 5px;
 }
 
 a {
