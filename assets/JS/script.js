@@ -18,7 +18,9 @@ async function runGame() {
 // Setup URL to call API:
 const DOMAIN = 'https://rogue-api.herokuapp.com/api/';
 const GENERATOR = `uniform`
-const url = `${DOMAIN}${GENERATOR}?width=80&height=25`;
+const dungeonWidth = 80;
+const dungeonHeight = 25;
+const url = `${DOMAIN}${GENERATOR}?width=${dungeonWidth}&height=${dungeonHeight}`;
 
 // Get needed HTML tags
 const dungeonContainer = document.querySelector("#dungeon-container");
@@ -178,8 +180,8 @@ function checkCollision () {
 let floorTiles = [];
 
 function listFloorTiles () {
-    for (let r = 1; r <= 25; r++) {
-        for (let c = 1; c <= 80; c++) {
+    for (let r = 1; r <= dungeonHeight; r++) {
+        for (let c = 1; c <= dungeonWidth; c++) {
             let thisTile = document.getElementById(`-${r}${c}`);
             if (thisTile.className == `floor`) {
                 floorTiles.push(`-${r}${c}`);
