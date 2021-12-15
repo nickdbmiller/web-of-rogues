@@ -81,6 +81,8 @@ main {
     align-content: space-around;
     justify-content: center;
     align-items: center;
+    min-height: 70%;
+    min-width: 80%;
 }
 
 #activity-log {
