@@ -4,6 +4,8 @@ let playGame = 0;
 let score = 0;
 let health = 10;
 let level = 1;
+let currentPlayerPos;
+let currentStairPos;
 
 async function runGame() {
     playGame = 1;
@@ -53,7 +55,6 @@ function displayError() {
 // Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
 async function dungeonGenerator() {
     resetDungeon();
-    setPlaceholder();
     await callAPI(url);
     let dungeon = document.createElement('dungeon');
     data.map.forEach((row, x) => {
@@ -71,38 +72,19 @@ async function dungeonGenerator() {
         dungeonContainer.appendChild(dungeon);
     };
 
-// Function to resize tile elements for screen size
-
-// let winWidth;
-// window.addEventListener('resize', tileSizer)
-
-// function tileSizer () {
-//     if (playGame == "1") {
-//         tile = document.querySelectorAll("tile");
-//         console.log(tile)
-//         winWidth = window.innerWidth;
-//         tile.style.width = "20px";
-//         tile.style.height = "20px"
-//     }
-// }
-
 // Function to reset dungeon
-
 function resetDungeon() {
     while (dungeonContainer.firstChild) {
         dungeonContainer.removeChild(dungeonContainer.firstChild);
     }
 }
 
-// Function to set placeholder
-function setPlaceholder() {
-    console.log("Placeholder");
-}
-
 // Function to render PC
     // RNG that picks a floor tile and then sets the innertext to @ that fills the tile
 function renderPC () {
-    const tile = document.getElementById(`${floorTiles[RNG(0, (floorTiles.length-1))]}`);
+    let position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
+    const tile = document.getElementById(`${position}`);
+    currentPlayerPos = position;
     tile.innerText = `@`;
 }
 
@@ -120,10 +102,12 @@ function displayCurrentStats () {
 }
 // Function to render Staircase
     // RNG that picks a floor tile and then sets the innertext to > that fills the tile
-   function renderStairs () {
-       const tile = document.getElementById(`${floorTiles[RNG(0, (floorTiles.length-1))]}`);
-       tile.innerText = `>`;
-   }
+function renderStairs () {
+    let position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
+    const tile = document.getElementById(`${position}`);
+    currentStairPos = position;
+    tile.innerText = `>`;
+}
 
 // Function to move PC
     // moveUp/Down/Left/Right() {Checks for wall, then checks for object, then changes tiles}

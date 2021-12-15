@@ -38,6 +38,17 @@ main {
     min-height: 30vh;
 }
 
+.loading-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 30vh;
+    background-color: grey;
+}
+
 /* Sidebars */
 .sidebar {
     display: flex;
