@@ -60,6 +60,7 @@ async function dungeonGenerator() {
     resetDungeon();
     await callAPI(url);
     let dungeon = document.createElement('dungeon');
+    let tileNum = 0;
     data.map.forEach((row, x) => {
             let rowObj = document.createElement('row');
             row.forEach((col, y) => {
@@ -67,7 +68,8 @@ async function dungeonGenerator() {
                 tile.setAttribute('value', col);
                 tile.setAttribute('coord', `${x+1},${y+1}`);
                 tile.className = col === 1 ? "wall" : "floor";
-                tile.id = `-${x+1}${y+1}`;
+                tileNum++;
+                tile.id = `-${tileNum}`;
                 rowObj.appendChild(tile);
             });
             dungeon.appendChild(rowObj);
@@ -144,13 +146,16 @@ function checkKey(e) {
     };
 };
 
-function movePlayerLeft() {
-    // if (currentPlayerPos >= -11
+function movePlayerLeft() {             // Need to add conditions to handle inbetween numbers.
     let intPlayerPos = parseInt(currentPlayerPos);
-    intPlayerPos++;
-    desiredPos = intPlayerPos.toString();
-    checkTile();
+    if (intPlayerPos <= -11 && intPlayerPos >= -19) {
+        intPlayerPos++;
+        desiredPos = intPlayerPos.toString();
+        checkTile();
+    }
 }
+
+// Each coordinate is gonna look like (1-${height})(1-{$width})
 
 function movePlayerUp() {
 
@@ -214,12 +219,10 @@ function RNG(min, max) {
 
 // Makes an array of the ID's of floor tiles
 function listFloorTiles () {
-    for (let r = 1; r <= dungeonHeight; r++) {
-        for (let c = 1; c <= dungeonWidth; c++) {
-            let thisTile = document.getElementById(`-${r}${c}`);
-            if (thisTile.className == `floor`) {
-                floorTiles.push(`-${r}${c}`);
-            };
+    for (let r = 1; r <= (dungeonHeight*dungeonWidth); r++) {
+        let thisTile = document.getElementById(`-${r}`);
+        if (thisTile.className == `floor`) {
+            floorTiles.push(`-${r}`);
         };
     };
     return floorTiles;
