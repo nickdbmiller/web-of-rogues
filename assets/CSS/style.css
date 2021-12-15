@@ -66,6 +66,8 @@ main {
     align-items: stretch;
     margin: 10px;
     padding: 0px 0px;
+    min-height: 50%;
+    min-width: 70%;
 }
 
 #dungeon-container {
