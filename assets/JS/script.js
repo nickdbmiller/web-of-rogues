@@ -9,9 +9,20 @@ let currentPlayerPos = null;
 let desiredPos = null;
 let currentStairPos = null;
 let floorTiles = [];
+let winStat = 0;
 
 async function runGame() {
     playGame = 1;
+    score = 0;
+    newScore = null;
+    health = 10;
+    gameLevel = 1;
+    currentPlayerPos = null;
+    desiredPos = null;
+    currentStairPos = null;
+    floorTiles = [];
+    winStat = 0;
+    resetDungeon();
     await dungeonGenerator();
     displayInitStats();
     listFloorTiles();
@@ -29,7 +40,7 @@ const url = `${DOMAIN}${GENERATOR}?width=${dungeonWidth}&height=${dungeonHeight}
 
 // Get needed HTML tags
 const dungeonContainer = document.querySelector("#dungeon-container");
-const startButton = document.querySelector("#start-button");
+let startButton = document.querySelector(".start-button");
 const dungeonLevel = document.querySelector("#dungeon-level");
 const playerHealth = document.querySelector("#health-stat");
 const playerScore = document.querySelector("#score");
@@ -59,7 +70,6 @@ function displayError() {
 // Function to Generate Dungeons
 // Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
 async function dungeonGenerator() {
-    resetDungeon();
     await callAPI(url);
     let dungeon = document.createElement('dungeon');
     let tileNum = 0;
@@ -184,12 +194,10 @@ function changePlayerPos() {
 };
 
 // Function to interact with objects
-    // Checks if there is a staircase and acts accordingly.
 function checkTile (movementMessage) {
     if (floorTiles.includes(desiredPos)) {
         if (desiredPos == currentStairPos) {
             incrementLevel();
-            updateActivtyLog("Your footsteps echo as you descend deeper into the dungeon...");
         } else {
             changePlayerPos();
             updateActivtyLog(`${movementMessage}`)
@@ -205,24 +213,42 @@ async function incrementLevel () {
     newScore = health*gameLevel;
     score = score + newScore;
     checkForWinner();
-    currentPlayerPos = null;
-    desiredPos = null;
-    currentStairPos = null;
-    floorTiles = [];
-    await dungeonGenerator();
-    displayCurrentStats();
-    listFloorTiles();
-    renderPC();
-    renderStairs();
-}
+    if (winStat < 1) {
+        currentPlayerPos = null;
+        desiredPos = null;
+        currentStairPos = null;
+        floorTiles = [];
+        updateActivtyLog("Your footsteps echo as you descend deeper into the dungeon...");
+        await dungeonGenerator();
+        displayCurrentStats();
+        listFloorTiles();
+        renderPC();
+        renderStairs();
+    };
+};
 
 // Function for win
 function checkForWinner () {
     if (gameLevel > 10) {
-        //Change dungeon to victory screen.
+        winStat = 1;
+        setVictoryScreen();
         updateActivtyLog("You have delved the deepest level! Victory is yours!")
+        updateActivtyLog("Play again if you dare!");
     };
 };
+
+function setVictoryScreen() {
+    resetDungeon();
+    const victoryScreen = document.createElement("section");
+    victoryScreen.id = "onload-placeholder"
+    const newGameButton = document.createElement("button");
+    newGameButton.classList.add("start-button");
+    newGameButton.innerText = "Start New Game+";
+    dungeonContainer.appendChild(victoryScreen);
+    victoryScreen.appendChild(newGameButton);
+    let startButton = document.querySelector(".start-button");
+    startButton.addEventListener("click", runGame);
+}
 
 // Function for activity log
 function updateActivtyLog(message) {

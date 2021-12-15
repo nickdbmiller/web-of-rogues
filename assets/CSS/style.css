@@ -116,7 +116,7 @@ main {
     min-width: 70%;
 }
 
-#start-button {
+.start-button {
     color: chartreuse;
     background-color: black;
     border: 2px dashed azure;
