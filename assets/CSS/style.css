@@ -28,6 +28,16 @@ main {
     min-height: 80vh;
 }
 
+#onload-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 30vh;
+}
+
 /* Sidebars */
 .sidebar {
     display: flex;
@@ -160,7 +170,6 @@ dungeon > row > div {
     width: 1vw;
     height: 1vw;
     font-size: 0.75vw;
-    
 }
 
 div.floor {
