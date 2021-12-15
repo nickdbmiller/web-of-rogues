@@ -109,7 +109,7 @@ main {
     align-content: space-around;
     justify-content: center;
     align-items: center;
-    min-height: 50%;
+    min-height: 30vh;
     min-width: 70%;
 }
 
@@ -129,14 +129,17 @@ main {
     border: 2px dashed azure;
     margin: 10px;
     padding: 10px 10px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .ng-button {
     color: yellow;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .death-button {
     color: red;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Top and Bottom Section (Static) */
