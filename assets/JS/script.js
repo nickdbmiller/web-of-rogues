@@ -7,6 +7,7 @@ let level = 1;
 let currentPlayerPos;
 let desiredPos;
 let currentStairPos;
+let floorTiles = [];
 
 async function runGame() {
     playGame = 1;
@@ -15,6 +16,8 @@ async function runGame() {
     listFloorTiles();
     renderPC();
     renderStairs();
+    console.log(currentPlayerPos);
+    console.log(currentStairPos);
 };
 
 // Setup URL to call API:
@@ -142,7 +145,8 @@ function checkKey(e) {
 };
 
 function movePlayerLeft() {
-
+    desiredPos = null; // get the ID of the tile to the immediate left.
+    checkTile();
 }
 
 function movePlayerUp() {
@@ -157,11 +161,27 @@ function movePlayerDown() {
 
 }
 
+function changePlayerPos() {
+    let currentTile = document.getElementById(`${currentPlayerPos}`);
+    currentTile.innerText = ``;
+    let newTile = document.getElementById(`${desiredPos}`);
+    newTile.innerText = `@`;
+    currentPlayerPos = desiredPos;
+};
+
 // Function to interact with objects
     // Checks if there is a staircase and acts accordingly.
 function checkTile () {
-    if 
-}
+    if (floorTiles.includes(`${desiredPos}`)) {
+        if (desiredPos == currentStairPos) {
+            incrementLevel();
+        } else {
+            changePlayerPos();
+        };
+    } else {
+        console.log("Wall Collision");
+    };
+};
 
 // Function to increment level
 function incrementLevel () {
@@ -179,19 +199,17 @@ async function checkForWinner () {
         await dungeonGenerator();
         renderPC();
         renderStairs();
-    }
-}
+    };
+};
 
 // Function for activity log
 
 // RNG
 function RNG(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-}
+};
 
 // Makes an array of the ID's of floor tiles
-let floorTiles = [];
-
 function listFloorTiles () {
     for (let r = 1; r <= dungeonHeight; r++) {
         for (let c = 1; c <= dungeonWidth; c++) {
