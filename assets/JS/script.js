@@ -146,13 +146,11 @@ function checkKey(e) {
     };
 };
 
-function movePlayerLeft() {             // Need to add conditions to handle inbetween numbers.
+function movePlayerLeft() {
     let intPlayerPos = parseInt(currentPlayerPos);
-    if (intPlayerPos <= -11 && intPlayerPos >= -19) {
-        intPlayerPos++;
-        desiredPos = intPlayerPos.toString();
-        checkTile();
-    }
+    intPlayerPos++;
+    desiredPos = intPlayerPos.toString();
+    checkTile();
 }
 
 // Each coordinate is gonna look like (1-${height})(1-{$width})
@@ -162,7 +160,10 @@ function movePlayerUp() {
 }
 
 function movePlayerRight() {
-
+    let intPlayerPos = parseInt(currentPlayerPos);
+    intPlayerPos--;
+    desiredPos = intPlayerPos.toString();
+    checkTile();
 }
 
 function movePlayerDown() {
