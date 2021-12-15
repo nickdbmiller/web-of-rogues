@@ -229,7 +229,7 @@ async function incrementLevel () {
 
 // Function for win
 function checkForWinner () {
-    if (gameLevel > 1) {
+    if (gameLevel > 10) {
         winStat = 1;
         setVictoryScreen();
         updateActivtyLog("You have delved the deepest level! Victory is yours!")
@@ -260,19 +260,15 @@ function updateActivtyLog(message) {
     readOut.appendChild(newLog);
     logItems++;
     if (logItems >= 12) {
-        scrollLog();
-    }
-}
+        readOut.removeChild(readOut.firstChild);
+    };
+};
 
 function resetActivityLog() {
     while (readOut.firstChild) {
         readOut.removeChild(readOut.firstChild);
-    }
-}
-
-function scrollLog() {
-    console.log("scroll");
-}
+    };
+};
 
 // RNG
 function RNG(min, max) {
