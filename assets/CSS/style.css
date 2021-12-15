@@ -151,16 +151,14 @@ dungeon > row {
 /* We need to be able to dynamically resize the height and width with view size */
 dungeon > row > div {
     display: flex;
-    width: 1vw;
-    height: 1vw;
     color: chartreuse;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: stretch;
-    width: 0.7vw;
-    height: 0.7vw;
+    width: 1vw;
+    height: 1vw;
     font-size: 0.75vw;
     
 }
