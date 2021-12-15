@@ -2,6 +2,7 @@
 
 let playGame = 0;
 let score = 0;
+let newScore = null;
 let health = 10;
 let gameLevel = 1;
 let currentPlayerPos = null;
@@ -189,6 +190,7 @@ function checkTile () {
     if (floorTiles.includes(desiredPos)) {
         if (desiredPos == currentStairPos) {
             incrementLevel();
+            updateActivtyLog("Your footsteps echo as you descend deeper into the dungeon...");
         } else {
             changePlayerPos();
         };
@@ -200,6 +202,8 @@ function checkTile () {
 // Function to increment level
 async function incrementLevel () {
     gameLevel++;
+    newScore = health*gameLevel;
+    score = score + newScore;
     checkForWinner();
     currentPlayerPos = null;
     desiredPos = null;
@@ -216,7 +220,7 @@ async function incrementLevel () {
 function checkForWinner () {
     if (gameLevel > 10) {
         //Change dungeon to victory screen.
-        alert("You win!");
+        updateActivtyLog("You have delved the deepest level! Victory is yours!")
     };
 };
 
