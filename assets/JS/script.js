@@ -22,7 +22,6 @@ async function runGame() {
     currentStairPos = null;
     floorTiles = [];
     winStat = 0;
-    resetDungeon();
     await dungeonGenerator();
     displayInitStats();
     listFloorTiles();
@@ -70,6 +69,7 @@ function displayError() {
 // Function to Generate Dungeons
 // Based on algorithm Ref: `http://rogue-api.herokuapp.com/`
 async function dungeonGenerator() {
+    resetDungeon();
     await callAPI(url);
     let dungeon = document.createElement('dungeon');
     let tileNum = 0;
