@@ -148,6 +148,7 @@ The response data from the API returns an array of ones and zeros, with specific
 ## Priority Matrix
 
 ![Priority Matrix for Development of Web of Rogues](./assets/images/WoR_priorityMatrix.png)
+###### [Priority matrix created with Whimsical](https://whimsical.com/) 
 
 ## Timeframes
 
@@ -155,19 +156,19 @@ The response data from the API returns an array of ones and zeros, with specific
 | ---       | :---:     |  :---:            | :---:         | :---:         |
 | Core HTML, CSS | H    | 3hrs              | 2 hrs         | 2 hrs         |
 | Setup Flexbox  | H    | 3hrs              | 1 hrs         | 1 hrs        |
-| Pseudocode JS  | H    | 3hrs              | 1 hrs         | X hrs        |
+| Pseudocode JS  | H    | 3hrs              | 2 hrs         | 2 hrs        |
 | Footer Links   | L    | 1hrs              | 0.25 hrs         | 0.25 hrs        |
-| Setup API to display on Page | H | 3hrs   | 4 hrs         | X hrs        |
+| Setup API to display on Page | H | 3hrs   | 5 hrs         | 5 hrs        |
 | Impliment Media Query | H    | 3hrs       | 1 hrs         | 1 hrs        |
 | Ensure Layout Ports to Mobile | H | 3hrs  | 4 hrs         | 4 hrs        |
 | In Game Objects | H    | 3hrs              | 3 hrs         | 3 hrs       |
-| JS logic for PC | H   | 3hrs              | 2 hrs         | X hrs        |
+| JS logic for PC | H   | 3hrs              | 6 hrs         | 6 hrs        |
 | JS logic for AI | H   | 3hrs              | 0 hrs         | X hrs        |
-| JS logic for game log | H | 3hrs          | 0 hrs         | X hrs        |
-| JS logic for game state | H | 3hrs        | 0 hrs         | X hrs        |
-| Styling for Win/Lose | M    | 3hrs              | 0 hrs         | X hrs         |
+| JS logic for game log | H | 3hrs          | 1 hrs         | 1 hrs        |
+| JS logic for game state | H | 3hrs        | 0.5 hrs         | 0.5 hrs        |
+| Styling for Win/Lose | M    | 3hrs              | 1 hrs         | 1 hrs         |
 | Finalize Styling   | M | 3hrs          | 0 hrs         | X hrs        |
-| Total     |           | 40hrs             | 0hrs          | X hrs        |
+| Total     |           | 40hrs             | 26.75hrs          | X hrs        |
 
 ## Code Snippet
 
