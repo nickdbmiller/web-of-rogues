@@ -2,7 +2,7 @@
 
 ## Project Name
 
-**_Web of Rogues_** (This will be link to live site on completion)
+[**_Web of Rogues_**](https://nickdbmiller.github.io/Web-of-Rogues-Game/)
 
 ## Project Description
 
