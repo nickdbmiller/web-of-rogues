@@ -142,7 +142,7 @@ The response data from the API returns an array of ones and zeros, with specific
 |Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Complete
 |Dec 14| API setup / Mobile Layout / PC JS logic | Complete
 |Dec 15| JS for game log and game state | Complete
-|Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
+|Dec 16| At least MVP / PMVP and further CSS polish as time allows | Complete
 |Dec 17| Presentations | Incomplete
 
 ## Priority Matrix
@@ -159,16 +159,16 @@ The response data from the API returns an array of ones and zeros, with specific
 | Pseudocode JS  | H    | 3hrs              | 2 hrs         | 2 hrs        |
 | Footer Links   | L    | 1hrs              | 0.25 hrs         | 0.25 hrs        |
 | Setup API to display on Page | H | 3hrs   | 5 hrs         | 5 hrs        |
-| Impliment Media Query | H    | 3hrs       | 1 hrs         | 1 hrs        |
+| Impliment Media Query | H    | 3hrs       | 2 hrs         | 2 hrs        |
 | Ensure Layout Ports to Mobile | H | 3hrs  | 4 hrs         | 4 hrs        |
-| In Game Objects | H    | 3hrs              | 3 hrs         | 3 hrs       |
+| In Game Objects | H    | 3hrs              | 4 hrs         | 4 hrs       |
 | JS logic for PC | H   | 3hrs              | 6 hrs         | 6 hrs        |
-| JS logic for AI | H   | 3hrs              | 0 hrs         | X hrs        |
-| JS logic for game log | H | 3hrs          | 1 hrs         | 1 hrs        |
-| JS logic for game state | H | 3hrs        | 0.5 hrs         | 0.5 hrs        |
-| Styling for Win/Lose | M    | 3hrs              | 1 hrs         | 1 hrs         |
-| Finalize Styling   | M | 3hrs          | 0 hrs         | X hrs        |
-| Total     |           | 40hrs             | 26.75hrs          | X hrs        |
+| JS logic for Stairs | H   | 3hrs              | 4 hrs         | 4 hrs        |
+| JS logic for game log | H | 3hrs          | 3 hrs         | 3 hrs        |
+| JS logic for game state | H | 3hrs        | 2 hrs         | 2 hrs        |
+| Styling for Win/Lose | M    | 3hrs              | 3 hrs         | 3 hrs         |
+| Finalize Styling   | M | 3hrs          | 2 hrs         | 2 hrs        |
+| Total     |           | 40hrs             | 40.25hrs          | 40.25 hrs        |
 
 ## Code Snippet
 
