@@ -1,8 +1,8 @@
 # [**_Web of Rogues_**](https://nickdbmiller.github.io/Web-of-Rogues-Game/)
 
-## Project Description
+## Overview
 
-This project is a browser based *rogue-like* game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
+**_Web of Rogues_** is a browser based *rogue-like* game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
 
 ![Gif Playthrough of Web of Rogues v1.0](./assets/images/WoRMVP.gif)
 ###### Gif generated with Peek
