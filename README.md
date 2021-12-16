@@ -4,6 +4,9 @@
 
 This project is a browser based *rogue-like* game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
 
+![Playthrough of Web of Rogues v1.0](./assets/images/WoRMVP.gif)
+###### Gif generated with Peek
+
 ## API and Data Sample
 
 This project uses [Roguelike Web API](https://roguelike.docs.apiary.io/) for procedural dungeon generation.
