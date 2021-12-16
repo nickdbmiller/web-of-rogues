@@ -133,8 +133,8 @@ function renderStairs () {
         tile.innerText = `>`;
     } else {
         tile.innerText = `>`;
-    }
-}
+    };
+};
 
 // Function to move PC
     // Arrow Key Listeners (can be expanded to use WASD and num keys as well.)

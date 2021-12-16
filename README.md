@@ -172,13 +172,40 @@ The response data from the API returns an array of ones and zeros, with specific
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+These two functions are how objects are rendered in the dungeon randomly each time it is generated. First a list of floor tiles is generated...
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let currentPlayerPos = null;
+let currentStairPos = null;
+let floorTiles = [];
+
+function listFloorTiles () {
+    for (let r = 1; r <= (dungeonHeight*dungeonWidth); r++) {
+        let thisTile = document.getElementById(`-${r}`);
+        if (thisTile.className == `floor`) {
+            floorTiles.push(`-${r}`);
+        };
+    };
+    return floorTiles;
+};
+```
+>...Then the stairs are put on a random floor tile (using a RNG function declared elsewhere in the script). The tile will always be different than the floor tile the PC is put on to prevent overwriting.
+```
+function renderStairs () {
+    let position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
+    let tile = document.getElementById(`${position}`);
+    currentStairPos = position;
+    if (currentPlayerPos == currentStairPos) {
+        while (currentPlayerPos == currentStairPos) {
+            position = `${floorTiles[RNG(0, (floorTiles.length-1))]}`;
+            tile = document.getElementById(`${position}`);
+            currentStairPos = position;
+        }
+        tile.innerText = `>`;
+    } else {
+        tile.innerText = `>`;
+    };
+};
 ```
 
-## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.
+## [Change Log](https://github.com/nickdbmiller/Web-of-Rogues-Game/commits/main)
