@@ -101,6 +101,7 @@ The response data from the API returns an array of ones and zeros, with specific
 
 #### Mobile Layout Vertical
 ![Victory Screen for Web of Rogues](./assets/images/WoR_mainGame_Mobile.png)
+###### [Wireframes created with Whimsical](https://whimsical.com/) 
 
 ## MVP/PostMVP
 #### MVP
@@ -140,7 +141,7 @@ The response data from the API returns an array of ones and zeros, with specific
 |Dec 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Dec 13| Project Approval / Core HTML, CSS / Pseudocode / Footer Links | Complete
 |Dec 14| API setup / Mobile Layout / PC JS logic | Complete
-|Dec 15| AI JS Logic / JS for game log and game state | Incomplete
+|Dec 15| JS for game log and game state | Complete
 |Dec 16| At least MVP / PMVP and further CSS polish as time allows | Incomplete
 |Dec 17| Presentations | Incomplete
 
