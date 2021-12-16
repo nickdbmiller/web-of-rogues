@@ -235,6 +235,7 @@ function checkForWinner () {
         setVictoryScreen();
         updateActivtyLog("You have delved the deepest level! Victory is yours!")
         updateActivtyLog("Play again if you dare!");
+        playGame = 0;
     };
 };
 
@@ -255,17 +256,19 @@ function setVictoryScreen() {
 // Functions for activity log
 let logItems = 3;
 function updateActivtyLog(message) {
-    let newLog = document.createElement("li");
-    newLog.innerText = `> ${message}`
-    readOut.appendChild(newLog);
-    logItems++;
-    if (window.innerWidth > 600) {
-        if (logItems >= 12) {
+    if (playGame > 0) {
+        let newLog = document.createElement("li");
+        newLog.innerText = `> ${message}`
+        readOut.appendChild(newLog);
+        logItems++;
+        if (window.innerWidth > 600) {
+            if (logItems >= 12) {
+                readOut.removeChild(readOut.firstChild);
+            };
+        } else if (logItems >= 3) {
             readOut.removeChild(readOut.firstChild);
         };
-    } else if (logItems >= 3) {
-        readOut.removeChild(readOut.firstChild);
-    }
+    };
 };
 
 function resetActivityLog() {
