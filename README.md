@@ -1,8 +1,4 @@
-# Project Overview
-
-## Project Name
-
-[**_Web of Rogues_**](https://nickdbmiller.github.io/Web-of-Rogues-Game/)
+# [**_Web of Rogues_**](https://nickdbmiller.github.io/Web-of-Rogues-Game/)
 
 ## Project Description
 
