@@ -114,6 +114,10 @@ main {
 }
 
 #activity-log {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color: black;
     color: chartreuse;
     border: 2px dashed azure;
@@ -192,7 +196,6 @@ dungeon > row {
     flex-direction: row;
 }
 
-/* We need to be able to dynamically resize the height and width with view size */
 dungeon > row > div {
     display: flex;
     color: chartreuse;
@@ -227,13 +230,16 @@ div.wall {
     
     main {
         flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
     }
 
     #main-game {
         order: 1;
         min-height: none;
         min-width: none;
-        
+        max-height: 50vh;
+        justify-content: space-evenly;
     }
 
     #player-stats {
@@ -246,10 +252,18 @@ div.wall {
 
     h2 {
         margin: 5px;
+        font-size: 1.5vh;
+    }
+
+    h3 {
+        margin: 5px;
+        font-size: 1.5vh;
     }
 
     #onload-placeholder {
         min-height: none;
+        margin: 0px;
+        padding: 0px;
     }
     
     .loading-placeholder {
@@ -257,143 +271,55 @@ div.wall {
     }
 
     .sidebar {
-        margin: 0px;
+        margin: 5px 0px 0px 0px;
         padding: 0px;
     }
     
     #level-container {
-        background-color: black;
-        color: chartreuse;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: stretch;
-        align-items: stretch;
-        margin: 10px;
-        padding: 0px 0px;
-        min-height: 30%;
-        min-width: 70%;
+        margin: 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
     }
     
     #dungeon-container {
-        background-color: black;
-        border: 2px dashed azure;
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: space-around;
-        justify-content: center;
-        align-items: center;
-        min-height: 30vh;
-        min-width: 70%;
+        margin: 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
     }
     
     #activity-log {
-        background-color: black;
-        color: chartreuse;
-        border: 2px dashed azure;
-        margin: 10px;
-        padding: 0px 10px;
-        min-height: 40%;
-        min-width: 70%;
-    }
-    
-    .start-button {
-        color: chartreuse;
-        background-color: black;
-        border: 2px dashed azure;
-        margin: 10px;
-        padding: 10px 10px;
-        font-family: 'Press Start 2P', cursive;
-    }
-    
-    .ng-button {
-        color: yellow;
-        font-family: 'Press Start 2P', cursive;
-    }
-    
-    .death-button {
-        color: red;
-        font-family: 'Press Start 2P', cursive;
-    }
-    
-    /* Top and Bottom Section (Static) */
-    nav {
-        text-align: center;
-        color: azure;
-        background-color: black;
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
     }
     
     footer {
-        text-align: center;
-        background-color: black;
-        color: azure;
-        padding: 10px;
-    }
-    
-    ul {
-        list-style: none;
+        padding: 5px 0px 0px 0px;
     }
     
     li {
         margin: 5px;
+        font-size: 1vh;
     }
     
-    a {
-        text-decoration: none;
-    }
-    
-    a:link {
-        color: azure;
-    }
-    
-    a:visited {
-        color: azure;
-    }
-    
-    a:hover {
-        color: chartreuse;
-    }
-    
-    /* Dungeon Styling */
-    dungeon {
-        display: flex;
-        flex-direction: column;
-        background: grey;
-    }
-    
-    dungeon > row {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    /* We need to be able to dynamically resize the height and width with view size */
     dungeon > row > div {
-        display: flex;
-        color: chartreuse;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        align-items: stretch;
-        width: 1vw;
-        height: 1vw;
-        max-width: 15px;
-        max-height: 15px;
-        font-size: 0.75vw;
+        width: 2vw;
+        height: 4vw;
+        max-width: 5px;
+        max-height: 10px;
+        font-size: 2vw;
         font-weight: bold;
     }
     
     div.floor {
-        background: black;
-        border: 1px dashed azure;
+        border: none;
     }
     
     div.wall {
-        background: grey;
-        border: 1px solid gray;
+        border: none;
     }
 }
 
