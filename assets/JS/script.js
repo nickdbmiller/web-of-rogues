@@ -194,6 +194,44 @@ function changePlayerPos() {
     currentPlayerPos = desiredPos;
 };
 
+// Mobile touch controls WIP
+    // When the user touches the screen set the pos x, y of their finger.
+    // When they move their finger check if the position is higher or lower and run the appropriate moveplayer function (repetedly)
+    // Ref: https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch
+document.addEventListener("touchstart", touchStart);
+document.addEventListener("touchmove", touchMove);
+document.addEventListener("touchend", touchStart);
+document.addEventListener("touchcancel", touchStart);
+
+let touch;
+let fingerPosX;
+let fingerPosY;
+
+function touchStart (e) {
+    if (window.innerWidth < 600) {
+        if (playGame > 0) {
+            if (e.touches) {
+                touch = e.touches[0];
+                console.log(touch);
+                fingerPosX = touch.clientX;
+                fingerPosY = touch.clientY;
+            };
+        };
+    };
+};
+
+function touchMove (e) {
+    if (window.innerWidth < 600) {
+        if (playGame > 0) {
+            if (e.touches) {
+                console.log(e.touches[0]);
+                fingerPosX = e.touches[0].clientX;
+                fingerPosY = e.touches[0].clientY;
+            };
+        };
+    };
+};
+
 // Function to interact with objects
 function checkTile (movementMessage) {
     if (floorTiles.includes(desiredPos)) {

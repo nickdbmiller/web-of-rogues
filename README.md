@@ -143,7 +143,7 @@ The response data from the API returns an array of ones and zeros, with specific
 |Dec 14| API setup / Mobile Layout / PC JS logic | Complete
 |Dec 15| JS for game log and game state | Complete
 |Dec 16| At least MVP / PMVP and further CSS polish as time allows | Complete
-|Dec 17| Presentations | Incomplete
+|Dec 17| Presentations | Complete
 
 ## Priority Matrix
 
