@@ -4,7 +4,7 @@
 
 **_Web of Rogues_** is a browser based *rogue-like* game. The game consists of procedurally generated levels of a "dungeon." The player will have to fight monsters and avoid traps to reach the end and win the game!
 
-![Gif Playthrough of Web of Rogues v1.0](./assets/images/WoRMVP.gif)
+![Gif Playthrough of Web of Rogues v1.0](./.github/images/WoRMVP.gif)
 ###### Gif generated with Peek
 
 ## API and Data Sample
@@ -91,16 +91,16 @@ The response data from the API returns an array of ones and zeros, with specific
 ## Wireframes
 
 #### Main Game
-![Main Game for Web of Rogues](./assets/images/WoR_mainGame_Desktop.png)
+![Main Game for Web of Rogues](./.github/images/WoR_mainGame_Desktop.png)
 
 #### Victory Screen
-![Victory Screen for Web of Rogues](./assets/images/WoR_Victory_Desktop.png)
+![Victory Screen for Web of Rogues](./.github/images/WoR_Victory_Desktop.png)
 
 #### Defeat Screen
-![Victory Screen for Web of Rogues](./assets/images/WoR_Defeat_Desktop.png)
+![Victory Screen for Web of Rogues](./.github/images/WoR_Defeat_Desktop.png)
 
 #### Mobile Layout Vertical
-![Victory Screen for Web of Rogues](./assets/images/WoR_mainGame_Mobile.png)
+![Victory Screen for Web of Rogues](./.github/images/WoR_mainGame_Mobile.png)
 ###### [Wireframes created with Whimsical](https://whimsical.com/) 
 
 ## MVP/PostMVP
@@ -147,7 +147,7 @@ The response data from the API returns an array of ones and zeros, with specific
 
 ## Priority Matrix
 
-![Priority Matrix for Development of Web of Rogues](./assets/images/WoR_priorityMatrix.png)
+![Priority Matrix for Development of Web of Rogues](./.github/images/WoR_priorityMatrix.png)
 ###### [Priority matrix created with Whimsical](https://whimsical.com/) 
 
 ## Timeframes
