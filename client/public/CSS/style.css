@@ -1,0 +1,333 @@
+* {
+    max-width: 50000px;
+    max-height: 50000px;
+}
+
+/* Page Background */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+}
+
+/* Flex Container */
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
+    margin: 10px 10px 10px 10px;
+}
+
+main {
+    border: 2px dashed azure;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 10px 10px;
+    min-width: 90vw;
+    min-height: 80vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#onload-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 30vh;
+}
+
+.loading-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    min-height: 30vh;
+    background-color: grey;
+}
+
+/* Sidebars */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 0px 10px;
+    color: chartreuse;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Game (Flex Container)*/
+#main-game {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 70%;
+    min-width: 70%;
+}
+
+#level-container {
+    background-color: black;
+    color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+    margin: 10px;
+    padding: 0px 0px;
+    min-height: 30%;
+    min-width: 70%;
+}
+
+#dungeon-container {
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    min-width: 70%;
+}
+
+#activity-log {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: black;
+    color: chartreuse;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 0px 10px;
+    min-height: 40%;
+    min-width: 70%;
+}
+
+.start-button {
+    color: chartreuse;
+    background-color: black;
+    border: 2px dashed azure;
+    margin: 10px;
+    padding: 10px 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.ng-button {
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.death-button {
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Top and Bottom Section (Static) */
+nav {
+    text-align: center;
+    color: azure;
+    background-color: black;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: azure;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: azure;
+}
+
+a:visited {
+    color: azure;
+}
+
+a:hover {
+    color: chartreuse;
+}
+
+/* Dungeon Styling */
+dungeon {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+}
+
+dungeon > row {
+    display: flex;
+    flex-direction: row;
+}
+
+dungeon > row > div {
+    display: flex;
+    color: chartreuse;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    width: 1vw;
+    height: 1vw;
+    max-width: 15px;
+    max-height: 15px;
+    font-size: 0.75vw;
+    font-weight: bold;
+}
+
+div.floor {
+    background: black;
+    border: 1px dashed azure;
+}
+
+div.wall {
+    background: grey;
+    border: 1px solid gray;
+}
+
+/* Horizontal Mobile Layout */
+@media only screen and (max-width: 600px) {
+    body {
+        align-items: stretch;
+    }
+    
+    main {
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    #main-game {
+        order: 1;
+        min-height: none;
+        min-width: none;
+        max-height: 50vh;
+        justify-content: space-evenly;
+    }
+
+    #player-stats {
+        order: 2;
+    }
+    
+    #player-inventory {
+        order: 3;    
+    }
+
+    h2 {
+        margin: 5px;
+        font-size: 1.5vh;
+    }
+
+    h3 {
+        margin: 5px;
+        font-size: 1.5vh;
+    }
+
+    #onload-placeholder {
+        min-height: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .loading-placeholder {
+        min-height: none;
+    }
+
+    .sidebar {
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+    }
+    
+    #level-container {
+        margin: 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
+    }
+    
+    #dungeon-container {
+        margin: 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
+    }
+    
+    #activity-log {
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+        min-height: none;
+        min-width: none;
+    }
+    
+    footer {
+        padding: 5px 0px 0px 0px;
+    }
+    
+    li {
+        margin: 5px;
+        font-size: 1vh;
+    }
+    
+    dungeon > row > div {
+        width: 2vw;
+        height: 4vw;
+        max-width: 5px;
+        max-height: 10px;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    
+    div.floor {
+        border: none;
+    }
+    
+    div.wall {
+        border: none;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    dungeon > row > div {
+        max-width: 20px;
+        max-height: 20px;
+        font-size: 0.6vw;
+    }
+}
