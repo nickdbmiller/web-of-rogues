@@ -86,7 +86,7 @@ The response data from the API returns an array of ones and zeros, with specific
             }
         }, "...This also continues on for quite some time."
 ```
-> All this looks like nonsense, but when formatted properly we begin to see how this could be used for making complex dungeons. [See this example of a live site using this API.](http://rogue-api.herokuapp.com)
+> All this looks like nonsense, but when formatted properly we begin to see how this could be used for making complex dungeons.
 
 ## Wireframes
 
